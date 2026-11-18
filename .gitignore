@@ -1,0 +1,25 @@
+# Sekrety i hasła – NIGDY do repozytorium
+.env
+.env.*
+*.pem
+*.key
+*secret*
+*password*
+*haslo*
+
+# Pliki systemowe i edytorów
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Zależności i pliki budowane automatycznie
+node_modules/
+dist/
+build/
+
+# Kopie i archiwa
+*.zip
+*.bak
+backup*/
