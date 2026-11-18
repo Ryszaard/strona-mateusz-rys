@@ -853,9 +853,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <script>
 (function(){
   // Adres odbiorcy składany w locie, żeby roboty nie zebrały go z kodu formularza.
-  // Po aktywacji FormSubmit można tu wpisać losowy alias z maila aktywacyjnego (wtedy adres w ogóle znika z kodu).
+  // Formularz wysyła na losowy alias FormSubmit (z maila aktywacyjnego dla mateuszrys.pl), więc adresu e-mail nie ma w kodzie formularza.
+  // Adres poniżej służy tylko do przycisku „Otwórz e-mail”, gdy automatyczna wysyłka się nie uda.
   const EMAIL = ['moc.liamg', '5081syrzsuetam'].map(x => x.split('').reverse().join('')).reverse().join('@');
-  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + EMAIL;
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/752c2e3762e083869a8eb51436a13ffb';
   const FORM_START = Date.now();
   document.getElementById('yr').textContent = new Date().getFullYear();
 

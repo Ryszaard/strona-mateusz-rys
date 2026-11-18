@@ -46,8 +46,8 @@ Zabezpieczenia w przeglądarce (index.html):
 - jedno zgłoszenie na minutę z tej samej przeglądarki,
 - adres odbiorcy nie jest wpisany wprost w kodzie formularza.
 
-Do zrobienia po aktywacji FormSubmit: w mailu aktywacyjnym jest losowy alias formularza –
-wpisać go w `index.html` zamiast składanego adresu (stała `EMAIL`), wtedy adres całkiem znika z kodu.
+Formularz wysyła na losowy alias FormSubmit (stała `FORM_ENDPOINT` w `index.html`), aktywowany dla mateuszrys.pl.
+Jeśli zmieni się domena, FormSubmit przyśle nowy mail aktywacyjny – trzeba kliknąć „Activate Form”.
 Po podłączeniu Cloudflare: ochrona Turnstile i limit wysyłek po stronie serwera.
 
 ## Nagłówki bezpieczeństwa (`_headers`)
