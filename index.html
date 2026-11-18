@@ -4,7 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mateusz Ryś – Strony internetowe</title>
-<meta name="description" content="Nowoczesne strony internetowe dla firm. Strona promocyjna od 519 zł, strona wizytówka od 909 zł, odświeżenie strony od 650 zł. Szybko, z wersją na telefon i z dbałością o szczegóły.">
+<meta name="description" content="Nowoczesne strony internetowe dla firm: strona promocyjna od 519 zł, wizytówka od 909 zł, odświeżenie od 650 zł. Indywidualny projekt i wersja na telefon.">
+<link rel="canonical" href="https://mateuszrys.pl/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0b0d17">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="Mateusz Ryś – Strony internetowe">
+<meta property="og:title" content="Mateusz Ryś – Strony internetowe dla firm">
+<meta property="og:description" content="Nowoczesne strony internetowe dla firm. Indywidualny projekt, wersja na telefon, ceny od 519 zł.">
+<meta property="og:url" content="https://mateuszrys.pl/">
+<meta property="og:image" content="https://mateuszrys.pl/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mateusz Ryś – Strony internetowe. Strona, która sprzedaje Twoją firmę za Ciebie.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Mateusz Ryś – Strony internetowe",
+  "url": "https://mateuszrys.pl/",
+  "image": "https://mateuszrys.pl/og-image.jpg",
+  "logo": "https://mateuszrys.pl/icon-512.png",
+  "description": "Projektowanie i tworzenie stron internetowych dla firm: strony promocyjne, strony wizytówki i odświeżanie starych stron.",
+  "telephone": "+48797414907",
+  "founder": { "@type": "Person", "name": "Mateusz Ryś" },
+  "areaServed": "PL",
+  "availableLanguage": ["pl", "en"],
+  "priceRange": "519–1560 zł",
+  "makesOffer": [
+    { "@type": "Offer", "name": "Strona promocyjna", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 519, "maxPrice": 909, "priceCurrency": "PLN" } },
+    { "@type": "Offer", "name": "Strona wizytówka", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 909, "maxPrice": 1300, "priceCurrency": "PLN" } },
+    { "@type": "Offer", "name": "Odświeżenie strony", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 650, "maxPrice": 1560, "priceCurrency": "PLN" } }
+  ]
+}
+</script>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root{
@@ -93,6 +131,7 @@ nav.scrolled{background:#0b0d17e6;backdrop-filter:blur(14px);border-bottom:1px s
 .step h3{font-size:18px;margin-bottom:6px}.step p{color:var(--muted);font-size:14.5px}
 
 /* RODO */
+.hp{position:absolute!important;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
 .rodo-info{font-size:13.5px;color:var(--muted);background:#0d1020;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px;line-height:1.6}
 .rodo-info a,.f-links a{color:var(--accent2)}
 .f-links a{color:var(--muted)} .f-links a:hover{color:var(--text)}
@@ -102,8 +141,8 @@ nav.scrolled{background:#0b0d17e6;backdrop-filter:blur(14px);border-bottom:1px s
 .pol-box{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;max-width:780px;width:100%;padding:44px 40px}
 .pol-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#0d1020;color:var(--text);font-size:16px;cursor:pointer}
 .pol-close:hover{border-color:var(--accent)}
-.pol h1{font-family:Sora,sans-serif;font-size:32px;letter-spacing:-.02em}
-.pol h2{font-family:Sora,sans-serif;font-size:19px;margin:28px 0 8px}
+.pol .pol-title{font-family:Sora,sans-serif;font-size:32px;letter-spacing:-.02em;margin:0}
+.pol h3{font-family:Sora,sans-serif;font-size:19px;margin:28px 0 8px}
 .pol p,.pol li{color:#c9cde0;font-size:15px;line-height:1.7}
 .pol ul{margin:8px 0 8px 22px;display:grid;gap:4px}
 .pol a{color:var(--accent2)}
@@ -464,6 +503,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="form-card reveal">
       <form id="orderForm" novalidate>
         <input type="hidden" name="_subject" value="Nowe zapytanie o stronę internetową">
+        <div class="hp" aria-hidden="true"><label>Zostaw to pole puste <input type="text" name="_honey" id="hpField" tabindex="-1" autocomplete="off"></label></div>
         <div class="progress" id="progress">
           <button type="button" data-go="0" class="active"><span class="n">1</span><span class="t">Dane</span></button>
           <button type="button" data-go="1"><span class="n">2</span><span class="t">Firma</span></button>
@@ -477,14 +517,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <h3>Dane kontaktowe</h3>
           <p class="sub">Żebym mógł się z Tobą skontaktować w sprawie strony.</p>
           <div class="row">
-            <div class="field"><label>Imię i nazwisko <span class="req">*</span></label><input type="text" name="Imię i nazwisko" required placeholder="Jan Kowalski"><div class="err-msg">Podaj imię i nazwisko</div></div>
-            <div class="field"><label>Nazwa firmy</label><input type="text" name="Nazwa firmy" placeholder="np. Kowalski Budownictwo"></div>
+            <div class="field"><label for="f-1">Imię i nazwisko <span class="req">*</span></label><input id="f-1" type="text" name="Imię i nazwisko" required placeholder="Jan Kowalski"><div class="err-msg">Podaj imię i nazwisko</div></div>
+            <div class="field"><label for="f-2">Nazwa firmy</label><input id="f-2" type="text" name="Nazwa firmy" placeholder="np. Kowalski Budownictwo"></div>
           </div>
           <div class="row">
-            <div class="field"><label>E-mail <span class="req">*</span></label><input type="email" name="email" required placeholder="jan@firma.pl"><div class="err-msg">Podaj poprawny adres e-mail</div></div>
-            <div class="field"><label>Telefon <span class="req">*</span></label><input type="tel" name="Telefon" required placeholder="+48 000 000 000" pattern="[0-9+\s\-()]{9,}"><div class="err-msg">Podaj poprawny numer telefonu</div></div>
+            <div class="field"><label for="f-3">E-mail <span class="req">*</span></label><input id="f-3" type="email" name="email" required placeholder="jan@firma.pl"><div class="err-msg">Podaj poprawny adres e-mail</div></div>
+            <div class="field"><label for="f-4">Telefon <span class="req">*</span></label><input id="f-4" type="tel" name="Telefon" required placeholder="+48 000 000 000" pattern="[0-9+\s\-()]{9,}"><div class="err-msg">Podaj poprawny numer telefonu</div></div>
           </div>
-          <div class="field"><label>Preferowana forma kontaktu</label>
+          <div class="field" role="group" aria-labelledby="lbl-5"><label id="lbl-5">Preferowana forma kontaktu</label>
             <div class="chips">
               <label class="chip"><input type="radio" name="Forma kontaktu" value="Telefon" checked><span>📞 Telefon</span></label>
               <label class="chip"><input type="radio" name="Forma kontaktu" value="E-mail"><span>✉️ E-mail</span></label>
@@ -498,11 +538,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <h3>O Twojej firmie</h3>
           <p class="sub">Opowiedz, czym się zajmujesz – na tej podstawie przygotuję treści i układ strony.</p>
           <div class="row">
-            <div class="field"><label>Branża</label><input type="text" name="Branża" placeholder="np. fryzjer, mechanik, restauracja"></div>
-            <div class="field"><label>Miasto / obszar działania</label><input type="text" name="Lokalizacja" placeholder="np. Kraków i okolice"></div>
+            <div class="field"><label for="f-6">Branża</label><input id="f-6" type="text" name="Branża" placeholder="np. fryzjer, mechanik, restauracja"></div>
+            <div class="field"><label for="f-7">Miasto / obszar działania</label><input id="f-7" type="text" name="Lokalizacja" placeholder="np. Kraków i okolice"></div>
           </div>
-          <div class="field"><label>Opis działalności <span class="req">*</span></label><textarea name="Opis działalności" required placeholder="Czym zajmuje się Twoja firma? Jakie usługi / produkty oferujesz? Kim są Twoi klienci? Co Cię wyróżnia?"></textarea><div class="err-msg">Opisz krótko swoją działalność</div></div>
-          <div class="field"><label>Logo firmy</label>
+          <div class="field"><label for="f-8">Opis działalności <span class="req">*</span></label><textarea id="f-8" name="Opis działalności" required placeholder="Czym zajmuje się Twoja firma? Jakie usługi / produkty oferujesz? Kim są Twoi klienci? Co Cię wyróżnia?"></textarea><div class="err-msg">Opisz krótko swoją działalność</div></div>
+          <div class="field" role="group" aria-labelledby="lbl-9"><label id="lbl-9">Logo firmy</label>
             <div class="drop" id="drop">
               <input type="file" id="logoInput" name="attachment" accept="image/*,.svg,.pdf">
               <svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:var(--accent)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
@@ -512,16 +552,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             <div class="logo-prev" id="logoPrev"><img id="logoImg" alt="Podgląd logo"><div><b id="logoName"></b><div class="hint" id="logoSize"></div></div><button type="button" id="logoRemove">Usuń</button></div>
             <label class="check" style="margin-top:12px"><input type="checkbox" name="Brak logo" value="Nie mam logo – chcę, żeby zostało zaprojektowane"> Nie mam logo – chętnie skorzystam z pomocy w jego przygotowaniu</label>
           </div>
-          <div class="field"><label>Media społecznościowe</label>
+          <div class="field" role="group" aria-labelledby="lbl-10"><label id="lbl-10">Media społecznościowe</label>
             <div class="row">
-              <div class="ico-in"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M14 9V7c0-.6.4-1 1-1h2V2h-3a4 4 0 0 0-4 4v3H8v4h2v9h4v-9h3l1-4h-4Z"/></svg><input type="url" name="Facebook" placeholder="Facebook – link"></div>
-              <div class="ico-in"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg><input type="url" name="Instagram" placeholder="Instagram – link"></div>
+              <div class="ico-in"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M14 9V7c0-.6.4-1 1-1h2V2h-3a4 4 0 0 0-4 4v3H8v4h2v9h4v-9h3l1-4h-4Z"/></svg><input type="url" name="Facebook" aria-label="Facebook – link" placeholder="Facebook – link"></div>
+              <div class="ico-in"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg><input type="url" name="Instagram" aria-label="Instagram – link" placeholder="Instagram – link"></div>
             </div>
             <div class="row" style="margin-top:12px">
-              <div class="ico-in"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9a7.3 7.3 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5Z"/></svg><input type="url" name="TikTok" placeholder="TikTok – link"></div>
-              <div class="ico-in"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg><input type="url" name="LinkedIn" placeholder="LinkedIn – link"></div>
+              <div class="ico-in"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9a7.3 7.3 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5Z"/></svg><input type="url" name="TikTok" aria-label="TikTok – link" placeholder="TikTok – link"></div>
+              <div class="ico-in"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg><input type="url" name="LinkedIn" aria-label="LinkedIn – link" placeholder="LinkedIn – link"></div>
             </div>
-            <div class="ico-in" style="margin-top:12px"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><input type="text" name="Inne linki" placeholder="Inne (YouTube, Mapy Google, Booksy, obecna strona…)"></div>
+            <div class="ico-in" style="margin-top:12px"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><input type="text" name="Inne linki" aria-label="Inne (YouTube, Mapy Google, Booksy, obecna strona…)" placeholder="Inne (YouTube, Mapy Google, Booksy, obecna strona…)"></div>
           </div>
         </div>
 
@@ -529,7 +569,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div class="fstep" data-step="2">
           <h3>Jaką stronę chcesz mieć?</h3>
           <p class="sub">Opisz swoją wizję własnymi słowami – nie musisz znać się na technice.</p>
-          <div class="field"><label>Rodzaj strony</label>
+          <div class="field" role="group" aria-labelledby="lbl-11"><label id="lbl-11">Rodzaj strony</label>
             <div class="chips" id="pkgChips">
               <label class="chip"><input type="radio" name="Pakiet" value="Strona promocyjna"><span>Strona promocyjna (519–909 zł)</span></label>
               <label class="chip"><input type="radio" name="Pakiet" value="Strona wizytówka" checked><span>Strona wizytówka (909–1300 zł)</span></label>
@@ -538,9 +578,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
               <label class="chip"><input type="radio" name="Pakiet" value="Nie wiem – doradź"><span>Nie wiem – doradź mi</span></label>
             </div>
           </div>
-          <div class="field" id="oldSiteField" style="display:none"><label>Adres obecnej strony <span class="req">*</span></label><input type="url" name="Obecna strona" id="oldSite" placeholder="https://twoja-obecna-strona.pl"><div class="err-msg">Podaj adres strony do odświeżenia</div><div class="hint">Napisz też w opisie poniżej, co Ci się w niej nie podoba.</div></div>
-          <div class="field"><label>Opis strony <span class="req">*</span></label><textarea name="Opis strony" required style="min-height:160px" placeholder="Jak ma wyglądać Twoja strona? Jaki ma mieć klimat (np. elegancki, nowoczesny, minimalistyczny, kolorowy)? Co jest dla Ciebie najważniejsze? Do czego ma służyć (pozyskiwanie klientów, prezentacja oferty, rezerwacje)?"></textarea><div class="err-msg">Opisz, jaką stronę chcesz mieć</div></div>
-          <div class="field"><label>Jakie sekcje mają się znaleźć na stronie?</label>
+          <div class="field" id="oldSiteField" style="display:none"><label for="oldSite">Adres obecnej strony <span class="req">*</span></label><input type="url" name="Obecna strona" id="oldSite" placeholder="https://twoja-obecna-strona.pl"><div class="err-msg">Podaj adres strony do odświeżenia</div><div class="hint">Napisz też w opisie poniżej, co Ci się w niej nie podoba.</div></div>
+          <div class="field"><label for="f-13">Opis strony <span class="req">*</span></label><textarea id="f-13" name="Opis strony" required style="min-height:160px" placeholder="Jak ma wyglądać Twoja strona? Jaki ma mieć klimat (np. elegancki, nowoczesny, minimalistyczny, kolorowy)? Co jest dla Ciebie najważniejsze? Do czego ma służyć (pozyskiwanie klientów, prezentacja oferty, rezerwacje)?"></textarea><div class="err-msg">Opisz, jaką stronę chcesz mieć</div></div>
+          <div class="field" role="group" aria-labelledby="lbl-14"><label id="lbl-14">Jakie sekcje mają się znaleźć na stronie?</label>
             <div class="chips">
               <label class="chip"><input type="checkbox" name="Sekcje" value="O nas"><span>O nas</span></label>
               <label class="chip"><input type="checkbox" name="Sekcje" value="Oferta / usługi"><span>Oferta / usługi</span></label>
@@ -554,28 +594,28 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             </div>
           </div>
           <div class="row">
-            <div class="field"><label>Gdzie planujesz umieścić stronę?</label>
-              <select name="Hosting"><option>Jeszcze nie wiem</option><option>Mam już hosting i domenę</option><option>Wybiorę hosting sam</option></select></div>
-            <div class="field"><label>Na kiedy potrzebujesz strony?</label>
-              <select name="Termin"><option>Bez pośpiechu</option><option>W ciągu 2 tygodni</option><option>W ciągu miesiąca</option><option>Jak najszybciej</option></select></div>
+            <div class="field"><label for="f-15">Gdzie planujesz umieścić stronę?</label>
+              <select id="f-15" name="Hosting"><option>Jeszcze nie wiem</option><option>Mam już hosting i domenę</option><option>Wybiorę hosting sam</option></select></div>
+            <div class="field"><label for="f-16">Na kiedy potrzebujesz strony?</label>
+              <select id="f-16" name="Termin"><option>Bez pośpiechu</option><option>W ciągu 2 tygodni</option><option>W ciągu miesiąca</option><option>Jak najszybciej</option></select></div>
           </div>
-          <div class="field"><label>Czy masz teksty i zdjęcia na stronę?</label>
-            <select name="Materiały"><option>Mam teksty i zdjęcia</option><option>Mam tylko zdjęcia</option><option>Mam tylko teksty</option><option>Nie mam – potrzebuję pomocy</option></select></div>
+          <div class="field"><label for="f-17">Czy masz teksty i zdjęcia na stronę?</label>
+            <select id="f-17" name="Materiały"><option>Mam teksty i zdjęcia</option><option>Mam tylko zdjęcia</option><option>Mam tylko teksty</option><option>Nie mam – potrzebuję pomocy</option></select></div>
         </div>
 
         <!-- KROK 4 -->
         <div class="fstep" data-step="3">
           <h3>Wygląd i inspiracje</h3>
           <p class="sub">Pokaż, co Ci się podoba – to najszybsza droga do strony, którą pokochasz.</p>
-          <div class="field"><label>Przykładowe strony, które Ci się podobają</label>
+          <div class="field" role="group" aria-labelledby="lbl-18"><label id="lbl-18">Przykładowe strony, które Ci się podobają</label>
             <div class="insp-row">
-              <input type="url" name="Inspiracja 1" placeholder="https://przykladowa-strona.pl">
-              <input type="url" name="Inspiracja 2" placeholder="https://kolejna-strona.pl (opcjonalnie)">
-              <input type="url" name="Inspiracja 3" placeholder="https://jeszcze-jedna.pl (opcjonalnie)">
+              <input type="url" name="Inspiracja 1" aria-label="https://przykladowa-strona.pl" placeholder="https://przykladowa-strona.pl">
+              <input type="url" name="Inspiracja 2" aria-label="https://kolejna-strona.pl (opcjonalnie)" placeholder="https://kolejna-strona.pl (opcjonalnie)">
+              <input type="url" name="Inspiracja 3" aria-label="https://jeszcze-jedna.pl (opcjonalnie)" placeholder="https://jeszcze-jedna.pl (opcjonalnie)">
             </div>
-            <textarea name="Co podoba się w inspiracjach" style="min-height:90px" placeholder="Co konkretnie Ci się w nich podoba? (np. kolory, układ, zdjęcia, animacje, czcionki)"></textarea>
+            <textarea name="Co podoba się w inspiracjach" style="min-height:90px" aria-label="Co konkretnie Ci się w nich podoba?" placeholder="Co konkretnie Ci się w nich podoba? (np. kolory, układ, zdjęcia, animacje, czcionki)"></textarea>
           </div>
-          <div class="field"><label>Kolorystyka</label>
+          <div class="field" role="group" aria-labelledby="lbl-19"><label id="lbl-19">Kolorystyka</label>
             <p class="hint" style="margin:-2px 0 12px">Wybierz gotową paletę albo ustaw własne kolory poniżej.</p>
             <div class="palettes" id="palettes"></div>
             <div class="custom-colors" id="customColors">
@@ -586,7 +626,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             <input type="hidden" name="Kolorystyka" id="colorsField">
             <label class="check" style="margin-top:16px"><input type="checkbox" id="noColors" name="Kolory – decyzja" value="Zdaję się na projektanta"> Nie mam pomysłu na kolory – zdaję się na Ciebie</label>
           </div>
-          <div class="field"><label>Czego NIE chcesz na stronie?</label><input type="text" name="Czego unikać" placeholder="np. ciemnego tła, zbyt wielu animacji, różowego koloru…"></div>
+          <div class="field"><label for="f-20">Czego NIE chcesz na stronie?</label><input id="f-20" type="text" name="Czego unikać" placeholder="np. ciemnego tła, zbyt wielu animacji, różowego koloru…"></div>
         </div>
 
         <!-- KROK 5 -->
@@ -594,7 +634,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <h3>Podsumowanie</h3>
           <p class="sub">Sprawdź dane i wyślij zapytanie. Odezwę się najszybciej, jak to możliwe.</p>
           <div class="summary" id="summary"></div>
-          <div class="field"><label>Dodatkowe uwagi</label><textarea name="Uwagi" style="min-height:90px" placeholder="Coś jeszcze, o czym powinienem wiedzieć?"></textarea></div>
+          <div class="field"><label for="f-21">Dodatkowe uwagi</label><textarea id="f-21" name="Uwagi" style="min-height:90px" placeholder="Coś jeszcze, o czym powinienem wiedzieć?"></textarea></div>
           <div class="rodo-info">Administratorem Twoich danych jest Mateusz Ryś (kontakt: mateuszrys1805@gmail.com, tel. 797 414 907). Dane z formularza przetwarzam, aby odpowiedzieć na Twoje zapytanie i przygotować wycenę (art. 6 ust. 1 lit. b RODO). Szczegóły, w tym Twoje prawa, znajdziesz w <a href="polityka-prywatnosci.html" class="pol-link">Polityce prywatności</a>.</div>
           <label class="check"><input type="checkbox" id="rodo" required> <span>Zapoznałem(-am) się z informacją o przetwarzaniu moich danych osobowych. <span class="req" style="color:var(--accent2)">*</span></span></label>
           <div class="err-msg" id="rodoErr" style="margin-left:29px">Zaznacz to pole, aby wysłać formularz</div>
@@ -664,14 +704,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="pol-box" role="dialog" aria-modal="true" aria-labelledby="polTitle">
     <button type="button" class="pol-close" id="polClose" aria-label="Zamknij / Close">✕</button>
     <div class="pol pol-pl" lang="pl">
-<h1 id="polTitle">Polityka prywatności</h1>
+<h2 class="pol-title" id="polTitle">Polityka prywatności</h2>
 <p class="muted">Ostatnia aktualizacja: 18 listopada 2026</p>
 
-<h2>1. Kto jest administratorem Twoich danych</h2>
+<h3>1. Kto jest administratorem Twoich danych</h3>
 <p>Administratorem danych osobowych jest <b>Mateusz Ryś</b>, który tworzy strony internetowe pod nazwą „Mateusz Ryś – Strony internetowe”. W sprawach dotyczących Twoich danych możesz się ze mną skontaktować:</p>
 <ul><li>e-mail: <a href="mailto:mateuszrys1805@gmail.com">mateuszrys1805@gmail.com</a></li><li>telefon: <a href="tel:+48797414907">797 414 907</a></li></ul>
 
-<h2>2. Jakie dane przetwarzam</h2>
+<h3>2. Jakie dane przetwarzam</h3>
 <p>Przetwarzam dane, które sam(a) mi przekażesz – przez formularz zamówienia, e-mailem lub telefonicznie:</p>
 <ul>
 <li>imię i nazwisko, adres e-mail, numer telefonu,</li>
@@ -680,7 +720,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <li>logo i inne materiały, jeśli prześlesz je e-mailem.</li>
 </ul>
 
-<h2>3. W jakim celu i na jakiej podstawie</h2>
+<h3>3. W jakim celu i na jakiej podstawie</h3>
 <ul>
 <li><b>Odpowiedź na zapytanie i przygotowanie wyceny</b> – to działania podejmowane na Twoje żądanie przed zawarciem umowy (art. 6 ust. 1 lit. b RODO).</li>
 <li><b>Wykonanie strony i kontakt w trakcie współpracy</b> – realizacja umowy (art. 6 ust. 1 lit. b RODO).</li>
@@ -688,7 +728,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <li><b>Obowiązki podatkowe i rachunkowe</b>, jeśli dojdzie do sprzedaży usługi – obowiązek prawny (art. 6 ust. 1 lit. c RODO).</li>
 </ul>
 
-<h2>4. Komu przekazuję dane</h2>
+<h3>4. Komu przekazuję dane</h3>
 <p>Nie sprzedaję Twoich danych i nie przekazuję ich w celach marketingowych. Dostęp do nich mogą mieć wyłącznie dostawcy usług, z których korzystam przy prowadzeniu działalności:</p>
 <ul>
 <li><b>FormSubmit</b> (formsubmit.co) – usługa, która przekazuje treść formularza na mój adres e-mail,</li>
@@ -696,17 +736,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <li><b>dostawca hostingu</b>, na którym działa ta strona.</li>
 </ul>
 
-<h2>5. Przekazywanie danych poza EOG</h2>
+<h3>5. Przekazywanie danych poza EOG</h3>
 <p>Usługi Google i FormSubmit mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym, w tym w USA. W takim przypadku przekazanie odbywa się na podstawie mechanizmów przewidzianych w RODO, takich jak decyzja Komisji Europejskiej stwierdzająca odpowiedni stopień ochrony (EU-US Data Privacy Framework) lub standardowe klauzule umowne.</p>
 
-<h2>6. Jak długo przechowuję dane</h2>
+<h3>6. Jak długo przechowuję dane</h3>
 <ul>
 <li>Jeśli nie dojdzie do współpracy – do <b>12 miesięcy</b> od ostatniego kontaktu.</li>
 <li>Jeśli dojdzie do współpracy – przez czas jej trwania, a potem do upływu okresu przedawnienia roszczeń.</li>
 <li>Dokumenty księgowe – przez okres wymagany przepisami prawa.</li>
 </ul>
 
-<h2>7. Twoje prawa</h2>
+<h3>7. Twoje prawa</h3>
 <p>Masz prawo do:</p>
 <ul>
 <li>dostępu do swoich danych i otrzymania ich kopii,</li>
@@ -719,27 +759,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </ul>
 <p>Aby skorzystać ze swoich praw, napisz na <a href="mailto:mateuszrys1805@gmail.com">mateuszrys1805@gmail.com</a>.</p>
 
-<h2>8. Czy musisz podać dane</h2>
+<h3>8. Czy musisz podać dane</h3>
 <p>Podanie danych jest dobrowolne. Bez imienia i nazwiska, adresu e-mail i numeru telefonu nie będę jednak mógł odpowiedzieć na Twoje zapytanie ani przygotować wyceny.</p>
 
-<h2>9. Zautomatyzowane decyzje</h2>
+<h3>9. Zautomatyzowane decyzje</h3>
 <p>Nie podejmuję wobec Ciebie decyzji w sposób zautomatyzowany i nie profiluję Twoich danych.</p>
 
-<h2>10. Pliki cookies i pamięć przeglądarki</h2>
+<h3>10. Pliki cookies i pamięć przeglądarki</h3>
 <p>Ta strona nie używa plików cookies ani narzędzi analitycznych czy reklamowych. W pamięci Twojej przeglądarki (localStorage) zapisuje wyłącznie wybrany język strony. Czcionki są wczytywane z tego samego serwera co strona. Strona zawiera linki do innych stron – po ich kliknięciu obowiązują zasady prywatności tych stron.</p>
 
-<h2>11. Zmiany polityki</h2>
+<h3>11. Zmiany polityki</h3>
 <p>Polityka może być aktualizowana, np. w razie zmiany usług, z których korzystam. Aktualna wersja jest zawsze dostępna na tej stronie.</p>
 </div>
     <div class="pol pol-en" lang="en">
-<h1>Privacy policy</h1>
+<h2 class="pol-title">Privacy policy</h2>
 <p class="muted">Last updated: 18 November 2026</p>
 
-<h2>1. Who controls your data</h2>
+<h3>1. Who controls your data</h3>
 <p>The controller of your personal data is <b>Mateusz Ryś</b>, who builds websites under the name “Mateusz Ryś – Websites”. For any matter concerning your data, you can contact me:</p>
 <ul><li>email: <a href="mailto:mateuszrys1805@gmail.com">mateuszrys1805@gmail.com</a></li><li>phone: <a href="tel:+48797414907">+48 797 414 907</a></li></ul>
 
-<h2>2. What data I process</h2>
+<h3>2. What data I process</h3>
 <p>I process the data you give me yourself – through the order form, by email or by phone:</p>
 <ul>
 <li>full name, email address, phone number,</li>
@@ -748,7 +788,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <li>your logo and other materials, if you send them by email.</li>
 </ul>
 
-<h2>3. Purposes and legal bases</h2>
+<h3>3. Purposes and legal bases</h3>
 <ul>
 <li><b>Replying to your enquiry and preparing a quote</b> – steps taken at your request before entering into a contract (Art. 6(1)(b) GDPR).</li>
 <li><b>Building the website and staying in touch during the project</b> – performance of a contract (Art. 6(1)(b) GDPR).</li>
@@ -756,7 +796,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <li><b>Tax and accounting obligations</b>, if a service is sold – legal obligation (Art. 6(1)(c) GDPR).</li>
 </ul>
 
-<h2>4. Who receives your data</h2>
+<h3>4. Who receives your data</h3>
 <p>I do not sell your data or share it for marketing purposes. Only the service providers I use to run my business may have access to it:</p>
 <ul>
 <li><b>FormSubmit</b> (formsubmit.co) – a service that forwards the form contents to my email address,</li>
@@ -764,17 +804,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <li><b>the hosting provider</b> that runs this website.</li>
 </ul>
 
-<h2>5. Transfers outside the EEA</h2>
+<h3>5. Transfers outside the EEA</h3>
 <p>Google and FormSubmit may process data outside the European Economic Area, including in the USA. In that case the transfer is based on the safeguards provided for in the GDPR, such as a European Commission adequacy decision (EU-US Data Privacy Framework) or standard contractual clauses.</p>
 
-<h2>6. How long I keep your data</h2>
+<h3>6. How long I keep your data</h3>
 <ul>
 <li>If we do not work together – up to <b>12 months</b> from our last contact.</li>
 <li>If we do work together – for the duration of the project and then until any claims become time-barred.</li>
 <li>Accounting documents – for the period required by law.</li>
 </ul>
 
-<h2>7. Your rights</h2>
+<h3>7. Your rights</h3>
 <p>You have the right to:</p>
 <ul>
 <li>access your data and receive a copy of it,</li>
@@ -787,16 +827,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </ul>
 <p>To exercise your rights, write to <a href="mailto:mateuszrys1805@gmail.com">mateuszrys1805@gmail.com</a>.</p>
 
-<h2>8. Do you have to provide your data</h2>
+<h3>8. Do you have to provide your data</h3>
 <p>Providing your data is voluntary. Without your name, email address and phone number, however, I will not be able to reply to your enquiry or prepare a quote.</p>
 
-<h2>9. Automated decisions</h2>
+<h3>9. Automated decisions</h3>
 <p>I do not make automated decisions about you and I do not profile your data.</p>
 
-<h2>10. Cookies and browser storage</h2>
+<h3>10. Cookies and browser storage</h3>
 <p>This website does not use cookies or any analytics or advertising tools. It only stores your chosen language in your browser's storage (localStorage). Fonts are loaded from the same server as the website. The website contains links to other sites – once you follow them, their own privacy policies apply.</p>
 
-<h2>11. Changes to this policy</h2>
+<h3>11. Changes to this policy</h3>
 <p>This policy may be updated, for example if the services I use change. The current version is always available on this website.</p>
 </div>
   </div>
@@ -811,7 +851,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <script>
 (function(){
-  const EMAIL = "mateuszrys1805@gmail.com";
+  // Adres odbiorcy składany w locie, żeby roboty nie zebrały go z kodu formularza.
+  // Po aktywacji FormSubmit można tu wpisać losowy alias z maila aktywacyjnego (wtedy adres w ogóle znika z kodu).
+  const EMAIL = ['moc.liamg', '5081syrzsuetam'].map(x => x.split('').reverse().join('')).reverse().join('@');
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + EMAIL;
+  const FORM_START = Date.now();
   document.getElementById('yr').textContent = new Date().getFullYear();
 
   // Portfolio links: default is the published copy on claude.ai; on own hosting switch to the local file
@@ -985,9 +1029,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
   async function submit(){
     const rodo = document.getElementById('rodo'), rodoErr = document.getElementById('rodoErr');
-    if(!rodo.checked){ rodoErr.style.display='block'; return; }
+    if(!rodo.checked){ rodoErr.textContent = t('Zaznacz to pole, aby wysłać formularz'); rodoErr.style.display='block'; return; }
     rodoErr.style.display='none';
     for(let k=0;k<steps.length;k++){ if(!validate(k)){ show(k); return; } }
+    // Ochrona przed spamem: pułapka dla botów (ukryte pole) i zbyt szybkie wypełnienie = udajemy sukces, nic nie wysyłamy
+    const hp = document.getElementById('hpField');
+    if((hp && hp.value) || Date.now() - FORM_START < 4000){ showDone(true); return; }
+    // Limit: jedno zgłoszenie na minutę z tej samej przeglądarki
+    let last = 0; try{ last = +localStorage.getItem('lastFormSent') || 0; }catch(e){}
+    if(Date.now() - last < 60000){ rodoErr.textContent = t('Zgłoszenie zostało już wysłane. Odczekaj minutę przed kolejnym.'); rodoErr.style.display='block'; return; }
     nextBtn.disabled = true; nextBtn.textContent = t('Wysyłanie…');
     const data = collect();
     const payload = {_subject:'Nowe zapytanie o stronę internetową', _template:'table', _captcha:'false'};
@@ -996,12 +1046,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     payload['Język formularza'] = (window.getLang && getLang()==='en') ? 'angielski' : 'polski';
     let sent = false;
     try{
-      const res = await fetch('https://formsubmit.co/ajax/' + EMAIL, {
+      const res = await fetch(FORM_ENDPOINT, {
         method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(payload)
       });
       const j = await res.json().catch(()=>({}));
       sent = res.ok && (j.success === true || j.success === 'true');
     }catch(e){ sent = false; }
+    if(sent){ try{ localStorage.setItem('lastFormSent', String(Date.now())); }catch(e){} }
+    showDone(sent, data);
+  }
+  function showDone(sent, data){
 
     form.style.display='none';
     const done = document.getElementById('doneBox'); done.style.display='block';
@@ -1029,7 +1083,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 (function(){
   const EN = {
     "Mateusz Ryś – Strony internetowe": "Mateusz Ryś – Websites",
-    "Nowoczesne strony internetowe dla firm. Strona promocyjna od 519 zł, strona wizytówka od 909 zł, odświeżenie strony od 650 zł. Szybko, z wersją na telefon i z dbałością o szczegóły.": "Modern websites for businesses. Promo page from 519 PLN, business card website from 909 PLN, website refresh from 650 PLN. Fast, mobile-friendly and crafted with attention to detail.",
+    "Nowoczesne strony internetowe dla firm: strona promocyjna od 519 zł, wizytówka od 909 zł, odświeżenie od 650 zł. Indywidualny projekt i wersja na telefon.": "Modern websites for businesses: promo page from 519 PLN, business card site from 909 PLN, refresh from 650 PLN. Custom design, mobile-friendly.",
     "Strony internetowe": "Websites",
     "Oferta": "Services",
     "Realizacje": "Portfolio",
@@ -1243,6 +1297,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Polityka prywatności": "Privacy policy",
     "Zapoznałem(-am) się z informacją o przetwarzaniu moich danych osobowych.": "I have read the information on how my personal data is processed.",
     "Zaznacz to pole, aby wysłać formularz": "Please tick this box to send the form",
+    "Zgłoszenie zostało już wysłane. Odczekaj minutę przed kolejnym.": "Your request has already been sent. Please wait a minute before sending another one.",
+    "Zostaw to pole puste": "Leave this field empty",
+    "Co konkretnie Ci się w nich podoba?": "What exactly do you like about them?",
     "← Wstecz": "← Back",
     "Dalej →": "Next →",
     "Wyślij zapytanie ✓": "Send request ✓",
