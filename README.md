@@ -23,14 +23,17 @@ Strona nie wymaga budowania – to zwykłe pliki HTML. Wystarczy je wgrać na ho
 
 ## Gdzie stoi strona
 
-- Domena: **jeszcze nie kupiona** (propozycja: mateuszrys.pl)
-- Hosting: **jeszcze nie wybrany** (propozycja: Cloudflare Pages)
-- Podgląd roboczy: claude.ai (tylko do testów, nie dla klientów)
+- Domena: **mateuszrys.pl** – kupiona w OVHcloud (konto: mateuszrys1805@gmail.com), ważna do 18.11.2027,
+  odnawianie co rok, blokada transferu włączona. Serwery DNS: Cloudflare (nola / trevor.ns.cloudflare.com).
+- Hosting: **Cloudflare Pages**, projekt `mateuszrys` → https://mateuszrys.pages.dev
+- Statystyki odwiedzin: Cloudflare Web Analytics (bez cookies) – panel Cloudflare → Pages → mateuszrys → Metrics.
+- Poczta: rekordy MX/SPF OVH zachowane w Cloudflare (pakiet Zimbra Starter w OVH).
 
 ## Jak wdrażać zmiany
 
-Docelowo: zmiana trafia na gałąź `main` → hosting sam aktualizuje stronę.
-(Uzupełnić po podłączeniu hostingu w etapie 3.)
+Zmiana trafia na gałąź `main` → Cloudflare Pages sam buduje i publikuje stronę (ok. 1 minuty).
+Zmiany robimy na osobnej gałęzi, a potem scalamy do `main`.
+Jeśli coś się zepsuje: Cloudflare → Pages → mateuszrys → Deployments → przy poprzedniej wersji „Rollback”.
 
 ## Formularz
 

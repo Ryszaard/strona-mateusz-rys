@@ -28,11 +28,11 @@ for page in sorted(ROOT.rglob('*.html')):
 
 csp = '; '.join([
     "default-src 'self'",
-    "script-src 'self' " + ' '.join(sorted(hashes)),
+    "script-src 'self' https://static.cloudflareinsights.com " + ' '.join(sorted(hashes)),
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self' data:",
-    "connect-src 'self' https://formsubmit.co",
+    "connect-src 'self' https://formsubmit.co https://cloudflareinsights.com",
     "form-action 'self' https://formsubmit.co",
     "frame-ancestors 'none'",
     "base-uri 'self'",
