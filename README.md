@@ -27,6 +27,10 @@ Strona nie wymaga budowania – to zwykłe pliki HTML. Wystarczy je wgrać na ho
   odnawianie co rok, blokada transferu włączona. Serwery DNS: Cloudflare (nola / trevor.ns.cloudflare.com).
 - Hosting: **Cloudflare Pages**, projekt `mateuszrys` → https://mateuszrys.pages.dev
 - Statystyki odwiedzin: Cloudflare Web Analytics (bez cookies) – panel Cloudflare → Pages → mateuszrys → Metrics.
+- Google Search Console: usługa „mateuszrys.pl” (domena), weryfikacja rekordem TXT w Cloudflare – **nie usuwać** tego rekordu.
+- Przekierowania: Cloudflare → mateuszrys.pl → Rules → „Redirect from WWW to root” oraz SSL/TLS → Always Use HTTPS.
+- DNSSEC: włączony w Cloudflare (DNS → Settings), rekord DS dodany w OVH (zakładka „Rekordy DS”).
+  Przy zmianie serwerów DNS w przyszłości najpierw usunąć rekord DS w OVH, inaczej domena przestanie działać.
 - Poczta: rekordy MX/SPF OVH zachowane w Cloudflare (pakiet Zimbra Starter w OVH).
 
 ## Jak wdrażać zmiany

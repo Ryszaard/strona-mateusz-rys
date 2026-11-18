@@ -4,14 +4,14 @@
 |---|---|---|
 | 1. Konta i logowanie | ✅ | Bitwarden, 2FA i kody zapasowe na Gmailu, Facebooku i GitHubie. Rejestrator domeny i Cloudflare dostaną 2FA przy zakładaniu. |
 | 2. GitHub | ✅ | Prywatne repo, Dependabot (alerty + poprawki) włączony, Cloudflare Pages ma dostęp tylko do tego repo. Secret scanning i ochrona gałęzi niedostępne na darmowym koncie – świadomie odłożone (brak kluczy w kodzie). |
-| 3. Domena i wdrożenie | ❓ | ✅ https://mateuszrys.pl działa (Cloudflare Pages, automatyczne wdrożenie z `main`), ✅ serwery DNS: nola/trevor.ns.cloudflare.com, ✅ www.mateuszrys.pl podpięte, ✅ http → https (Always Use HTTPS + HSTS), ✅ brak starego rekordu DS z OVH. Zostało: przekierowanie www → mateuszrys.pl (reguła w Cloudflare) oraz DNSSEC (włączyć w Cloudflare, rekord DS dodać w OVH). |
+| 3. Domena i wdrożenie | ✅ | https://mateuszrys.pl na Cloudflare Pages (automatyczne wdrożenie z `main`), DNS w Cloudflare, www i http przekierowują na https://mateuszrys.pl (reguła „Redirect from WWW to root” + Always Use HTTPS), DNSSEC włączony w Cloudflare, rekord DS (key tag 2371, alg. 13) dodany w OVH 18.11 – aktywacja w toku. |
 | 4. Bezpieczeństwo strony | ✅ | securityheaders.com: **A+** (18.11.2026). Pułapka na boty, blokada wielokrotnej wysyłki, formularz wysyła na alias FormSubmit (adresu e-mail nie ma w kodzie formularza), CSP z odciskami skryptów, HSTS. Turnstile/limit po stronie serwera – świadomie odłożone (mały ruch, FormSubmit ma własny antyspam). |
 | 5. RODO | ✅ | Polityka prywatności PL/EN, klauzula przy formularzu, dane w stopce. Bez działalności gospodarczej – administrator: Mateusz Ryś (imię, nazwisko, kontakt). |
 | 6. Treść i telefon | ❓ | ✅ podpisy pól formularza powiązane z polami (czytniki ekranu), opisy zdjęć, stałe kolory w zmiennych CSS. Zostało: test na prawdziwym telefonie, prawdziwe opinie klientów, więcej realizacji. |
-| 7. SEO | ❓ | ✅ tytuł, opis (≤155 znaków), jeden h1, favicon, obrazek do udostępnień + Open Graph, robots.txt, sitemap.xml, strona 404, dane strukturalne (schema.org), canonical. Zostało po domenie: sprawdzić podgląd linku na Facebooku i PageSpeed Insights. |
-| 8. Analityka i logi | ❓ | ✅ Cloudflare Web Analytics (bez cookies), ✅ formularz aktywowany w FormSubmit i przetestowany – zgłoszenia dochodzą na Gmail. Zostało: Google Search Console, monitoring dostępności, test formularza z adresu mateuszrys.pl. |
+| 7. SEO | ✅ | Tytuł, opis, h1, favicon, Open Graph, robots.txt, sitemap.xml, 404, schema.org, canonical. Google Search Console: domena zweryfikowana (rekord TXT – nie usuwać), mapa strony przesłana 18.11 (pierwsze pobranie jeszcze w toku). Zostało: sprawdzić podgląd linku na Facebooku, PageSpeed. |
+| 8. Analityka i logi | ✅ | Cloudflare Web Analytics (bez cookies), Search Console, formularz aktywowany dla mateuszrys.pl i przetestowany (zgłoszenia na Gmail, wysyłka na alias). Monitoring dostępności – świadomie odłożony (Cloudflare Pages, statyczna strona). |
 | 9. Kopie | ✅ | Kod w GitHubie, instrukcja kopii i plan awaryjny w README. Do robienia co miesiąc: Download ZIP na dysk. |
-| 10. Test przed live | ❓ | ✅ wszystkie wewnętrzne linki i kotwice działają, ✅ strona 404, sitemap, robots, ✅ PL/EN, okno polityki prywatności, ✅ widok na telefonie 360–414 px (poprawiony błąd poszerzania strony), ✅ nagłówki A+, ✅ http → https. Zostało: aktywacja FormSubmit dla mateuszrys.pl + test, przekierowanie www, DNSSEC, Search Console, test na prawdziwym iPhonie, podgląd linku na Facebooku. |
+| 10. Test przed live | ❓ | ✅ linki i kotwice, 404, sitemap, robots, PL/EN, polityka, telefon 360–414 px, nagłówki A+, http/www → https://mateuszrys.pl, formularz z domeny. Zostało: przeklikanie na prawdziwym iPhonie, podgląd linku na Facebooku, potwierdzenie aktywacji DNSSEC. |
 
 ## Co zrobiliśmy (18.11.2026)
 - Etap 1: menedżer haseł, 2FA, kody zapasowe.
@@ -35,4 +35,4 @@
 - Formularz aktywowany i przetestowany.
 
 ## Następny krok
-Przekierowanie www → mateuszrys.pl i DNSSEC (wymaga logowania do Cloudflare i OVH), potem Search Console, monitoring i etap 10 (test końcowy, w tym telefon).
+Test na iPhonie i podgląd linku na Facebooku, potem można ogłaszać stronę. Sprawdzić za kilka dni w Search Console, czy mapa strony została pobrana.
