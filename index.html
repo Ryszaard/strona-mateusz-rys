@@ -347,14 +347,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .about-photo::after{content:"";position:absolute;left:50%;top:9%;width:86%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;padding:1.5px;background:conic-gradient(from 210deg,#7c5cff,#22d3ee,transparent 40%,transparent 60%,#7c5cff);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.55;z-index:-1;animation:aspin 26s linear infinite}
 .about-photo img{width:100%;height:100%;object-fit:contain;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.6) 72%,transparent 94%),linear-gradient(to right,transparent,#000 16%,#000 84%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.6) 72%,transparent 94%),linear-gradient(to right,transparent,#000 16%,#000 84%,transparent);mask-composite:intersect;transform:translateY(var(--py,0px));transition:transform .2s linear}
 .about-photo .badge-float{z-index:2}
-.about-photo .ab1{left:-8%;top:66%;animation:float 7s ease-in-out infinite}
-.about-photo .ab2{right:-10%;top:47%;animation:float 8s ease-in-out infinite reverse}
+.about-photo .ab1{left:-12%;top:70%;animation:float 7s ease-in-out infinite}
+.about-photo .ab2{right:-12%;top:84%;animation:float 8s ease-in-out infinite reverse}
 .about-txt h2{font-size:clamp(30px,4vw,44px);margin:16px 0 18px}
 .about-txt p{color:var(--muted);font-size:17px;margin-bottom:14px;max-width:560px}
 .about-list{list-style:none;display:grid;gap:12px;margin:26px 0 32px}
 .about-list li{display:flex;gap:12px;align-items:flex-start}
 .about-list li i{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:#7c5cff22;color:var(--accent2);font-style:normal;font-size:14px;margin-top:1px}
 .about-sign{font-family:Sora,sans-serif;font-size:15px;color:var(--text);margin-top:4px}
+.about-solo{grid-template-columns:1fr;max-width:760px;text-align:center}
+.about-solo .about-txt p{margin-left:auto;margin-right:auto}
+.about-solo .about-list{justify-content:center;grid-template-columns:repeat(3,1fr);text-align:left;gap:14px}
+.about-solo .about-list li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.hero-photo-col{position:relative}
+.hero-photo-col .about-photo{max-width:460px}
 @keyframes aglow{50%{transform:scale(1.08);opacity:.8}}
 @keyframes aspin{to{transform:translateX(-50%) rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.about-photo::before,.about-photo::after,.about-photo .badge-float{animation:none}.about-photo img{transform:none}}
@@ -369,10 +375,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:900px){
   .hero-in,.contact-box,.price-wrap{grid-template-columns:1fr}
   .about{grid-template-columns:1fr;gap:34px}
-  .about-photo{max-width:340px}
-  .about-photo .ab1{left:-2%}
-  .about-photo .ab2{right:-2%;top:74%}
-  .about-photo .ab1{top:58%}
+  .hero-photo-col{order:-1}
+  .hero-photo-col .about-photo{max-width:300px}
+  .about-photo .ab1{left:-14%;top:72%;font-size:12px;padding:9px 12px}
+  .about-photo .ab2{right:-14%;top:86%;font-size:12px;padding:9px 12px}
+  .about-solo .about-list{grid-template-columns:1fr}
   #o-mnie{padding:60px 0 80px}
   .mock-col{display:none}
   .feat-grid{grid-template-columns:1fr 1fr}
@@ -432,18 +439,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div><b>1:1</b><span>indywidualny projekt</span></div>
       </div>
     </div>
-    <div class="mock-col" style="position:relative">
-      <div class="mock">
-        <div class="mock-bar"><i></i><i></i><i></i></div>
-        <div class="mock-screen">
-          <div class="ms-nav"><div class="ms-dot"></div><div class="ms-links"><i></i><i></i><i></i></div></div>
-          <div class="ms-h"></div><div class="ms-h s"></div>
-          <div class="ms-btn"></div>
-          <div class="ms-cards"><div></div><div></div><div></div></div>
-        </div>
+    <div class="hero-photo-col">
+      <div class="about-photo" id="aboutPhoto">
+        <img src="mateusz-760.webp" srcset="mateusz-440.webp 440w, mateusz-760.webp 760w" sizes="(max-width: 900px) 300px, 460px" width="760" height="1013" alt="Mateusz Ryś – projektant stron internetowych" fetchpriority="high" decoding="async">
+        <div class="badge-float ab1"><span class="bf-ic">👋</span><div><b>Mateusz Ryś</b><br><span style="color:var(--muted)">twórca stron www</span></div></div>
+        <div class="badge-float ab2"><span class="bf-ic" style="background:#22d3ee22;color:var(--accent2)">1:1</span><b>Kontakt bezpośrednio ze mną</b></div>
       </div>
-      <div class="badge-float bf1"><span class="bf-ic">✓</span><div><b>Strona gotowa</b><br><span style="color:var(--muted)">Twoja firma online</span></div></div>
-      <div class="badge-float bf2"><span class="bf-ic" style="background:#7c5cff22;color:var(--accent)">⚡</span><b>Szybkie ładowanie</b></div>
     </div>
   </div>
 </header>
@@ -522,12 +523,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <!-- O MNIE -->
 <section id="o-mnie">
-  <div class="wrap about">
-    <div class="about-photo reveal" id="aboutPhoto">
-      <img src="mateusz-760.webp" srcset="mateusz-440.webp 440w, mateusz-760.webp 760w" sizes="(max-width: 900px) 340px, 440px" width="760" height="1013" alt="Mateusz Ryś – projektant stron internetowych" loading="lazy" decoding="async">
-      <div class="badge-float ab1"><span class="bf-ic">👋</span><div><b>Mateusz Ryś</b><br><span style="color:var(--muted)">twórca stron www</span></div></div>
-      <div class="badge-float ab2"><span class="bf-ic" style="background:#22d3ee22;color:var(--accent2)">1:1</span><b>Kontakt bezpośrednio ze mną</b></div>
-    </div>
+  <div class="wrap about about-solo">
     <div class="about-txt reveal">
       <span class="tag">O mnie</span>
       <h2>Cześć, jestem <span class="grad-text">Mateusz</span>.</h2>
