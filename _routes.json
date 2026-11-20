@@ -1,5 +1,16 @@
 {
   "version": 1,
-  "include": ["/api/*", "/lib/*", "/migrations/*", "/functions/*", "/narzedzia/*", "/README.md", "/STAN-STRONY.md", "/_routes.json", "/_headers"],
+  "include": [
+    "/api/*",
+    "/lib/*",
+    "/migrations/*",
+    "/functions/*",
+    "/narzedzia/*",
+    "/README.md",
+    "/STAN-STRONY.md",
+    "/_routes.json",
+    "/_headers",
+    "/zrodla/*"
+  ],
   "exclude": []
 }

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://mateuszrys.pl/</loc><lastmod>2026-11-20</lastmod></url>
   <url>
-    <loc>https://mateuszrys.pl/</loc>
+    <loc>https://mateuszrys.pl/oferta</loc>
     <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszrys.pl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszrys.pl/oferta"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mateuszrys.pl/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mateuszrys.pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mateuszrys.pl/oferta"/>
   </url>
   <url>
     <loc>https://mateuszrys.pl/en/</loc>
     <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszrys.pl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszrys.pl/oferta"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mateuszrys.pl/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mateuszrys.pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mateuszrys.pl/oferta"/>
   </url>
   <url><loc>https://mateuszrys.pl/strona-promocyjna</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://mateuszrys.pl/strona-wizytowka</loc><lastmod>2026-11-20</lastmod></url>

@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
-"""Tworzy angielską wersję strony głównej: en/index.html.
+"""Tworzy angielską wersję strony z ofertą (oferta.html): en/index.html.
 
 Bierze index.html i tłumaczy teksty słownikiem EN, który jest w skrypcie w index.html
 (ten sam, którego używa przełącznik PL/EN). Dzięki temu Google widzi wersję angielską
 pod osobnym adresem https://mateuszrys.pl/en/.
 
-Po KAŻDEJ zmianie index.html uruchom kolejno:
+Po KAŻDEJ zmianie oferta.html uruchom kolejno:
 
     python narzedzia/generuj_en.py
     python narzedzia/aktualizuj_naglowki.py
 
-Nowy tekst na stronie dopisz też do słownika EN w index.html – inaczej w wersji EN zostanie po polsku.
+Nowy tekst na stronie dopisz też do słownika EN w oferta.html – inaczej w wersji EN zostanie po polsku.
 """
 import json, pathlib, re
 from bs4 import BeautifulSoup, NavigableString, Comment
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = 'https://mateuszrys.pl'
-src = (ROOT / 'index.html').read_text(encoding='utf-8')
+src = (ROOT / 'oferta.html').read_text(encoding='utf-8')
 
 m = re.search(r'const EN = (\{.*?\n  \});', src, re.S)
 EN = json.loads(re.sub(r'(?m)^\s*//.*$', '', m.group(1)))
@@ -114,6 +114,6 @@ for node in BeautifulSoup(out, 'html.parser').body.find_all(string=True):
         left.add(t)
 print('Zapisano en/index.html')
 if left:
-    print('Bez tłumaczenia (dopisz do słownika EN w index.html):')
+    print('Bez tłumaczenia (dopisz do słownika EN w oferta.html):')
     for t in sorted(left):
         print(' -', t[:120])

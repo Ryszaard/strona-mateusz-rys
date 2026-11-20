@@ -6,7 +6,7 @@
 
 - [Strona promocyjna](https://mateuszrys.pl/strona-promocyjna): 799 zł, 2 rundy poprawek w cenie. Jedna krótka, przewijana strona pod konkretną usługę, promocję lub wydarzenie, skupiona na jednym celu (telefon, zapis, zakup).
 - [Strona wizytówka](https://mateuszrys.pl/strona-wizytowka): 1490 zł, najczęściej wybierana. Do 5 podstron z indywidualnym projektem graficznym, założenie Wizytówki Google, sekcje o firmie, oferta, galeria i kontakt, wersja na telefon, tablet i komputer, podstawowa optymalizacja pod Google, poprawki do pełnego zadowolenia.
-- [Strona firmowa](https://mateuszrys.pl/#cennik): od 2490 zł. Do 8 podstron.
+- [Strona firmowa](https://mateuszrys.pl/oferta#cennik): od 2490 zł. Do 8 podstron.
 - [Odświeżenie strony](https://mateuszrys.pl/odswiezenie-strony): od 990 zł. Nowy wygląd starej strony, dostosowanie do telefonów, uporządkowanie treści, szybsze ładowanie i lepsza widoczność w Google.
 - Dodatki: dodatkowa podstrona 199 zł, publikacja strony (domena i hosting) 149 zł, teksty od 299 zł, wersja angielska +30%, opieka nad stroną od 79 zł/mies.
 - Ceny są końcowe (bez doliczania VAT) i nie obejmują hostingu ani domeny – te klient opłaca bezpośrednio u dostawcy. Dokładna wycena jest ustalana przed rozpoczęciem pracy.
@@ -38,8 +38,9 @@
 
 ## Kontakt
 
-- Strona: https://mateuszrys.pl/
-- Formularz zamówienia: https://mateuszrys.pl/#zamow
+- Strona główna (pokaz możliwości – nocna scena 3D z samochodem): https://mateuszrys.pl/
+- Oferta, cennik i formularz: https://mateuszrys.pl/oferta
+- Formularz zamówienia: https://mateuszrys.pl/oferta#zamow
 - E-mail: mateuszrys1805@gmail.com
 - Telefon: +48 797 414 907
 - Obszar działania: cała Polska (zdalnie)

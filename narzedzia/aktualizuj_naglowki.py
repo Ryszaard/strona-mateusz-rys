@@ -16,7 +16,7 @@ SCRIPT_RE = re.compile(r'<script(?P<attrs>[^>]*)>(?P<body>.*?)</script>', re.S |
 
 hashes = set()
 for page in sorted(ROOT.rglob('*.html')):
-    if 'node_modules' in page.parts:
+    if 'node_modules' in page.parts or 'zrodla' in page.parts:
         continue
     html = page.read_text(encoding='utf-8')
     for m in SCRIPT_RE.finditer(html):
@@ -51,6 +51,9 @@ headers = f"""# Plik tworzony automatycznie przez narzedzia/aktualizuj_naglowki.
   Cross-Origin-Opener-Policy: same-origin
 
 /fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*
   Cache-Control: public, max-age=31536000, immutable
 
 /crm

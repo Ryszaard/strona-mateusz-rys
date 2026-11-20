@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { background: #000; scroll-behavior: auto; }
+body { font-family: 'Inter', system-ui, sans-serif; color: #262626; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: #7c5cff; color: #fff; }
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[1440px] px-5 md:px-12; }
+  .kicker { @apply text-[11px] font-semibold uppercase tracking-[0.18em]; }
+  .btn { @apply inline-flex items-center justify-center gap-3 px-7 h-12 rounded-full text-[14px] font-semibold tracking-wide transition duration-300; }
+  .btn-primary { @apply btn bg-grad text-white shadow-[0_10px_30px_-10px_#7c5cffaa] hover:brightness-110; }
+  .btn-light { @apply btn border border-white/70 text-white hover:bg-white hover:text-black; }
+  .btn-dark { @apply btn border border-[#262626] text-[#262626] hover:bg-[#262626] hover:text-white; }
+  .link-arrow { @apply inline-flex items-center gap-2 text-[14px] font-semibold text-mblue hover:underline underline-offset-4; }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }

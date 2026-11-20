@@ -85,11 +85,11 @@ def page(path, title, desc, body, ld, crumbs, current=None, og_type="website"):
 <header class="top"><div class="wrap wide top-in">
   <a href="/" class="logo"><span class="logo-mark">MR</span><span>Mateusz Ryś <small>Strony internetowe</small></span></a>
   <nav class="top-links" aria-label="Menu">
-    <a href="/#oferta">Oferta</a>
-    <a href="/#cennik"{cur('cennik')}>Cennik</a>
-    <a href="/#realizacje">Realizacje</a>
+    <a href="/oferta#oferta">Oferta</a>
+    <a href="/oferta#cennik"{cur('cennik')}>Cennik</a>
+    <a href="/oferta#realizacje">Realizacje</a>
     <a href="/blog/"{cur('blog')}>Poradnik</a>
-    <a href="/#zamow" class="btn btn-primary">Zamów stronę</a>
+    <a href="/oferta#zamow" class="btn btn-primary">Zamów stronę</a>
   </nav>
 </div></header>
 <main class="wrap">
@@ -98,7 +98,7 @@ def page(path, title, desc, body, ld, crumbs, current=None, og_type="website"):
 <section class="cta">
   <h2>Porozmawiajmy o Twojej stronie</h2>
   <p>Opisz swój pomysł w formularzu – odezwę się z wyceną, zanim zaczniemy pracę.</p>
-  <div class="btns"><a href="/#zamow" class="btn btn-primary">Opisz swoją stronę →</a><a href="tel:+48797414907" class="btn btn-ghost">Zadzwoń: 797 414 907</a></div>
+  <div class="btns"><a href="/oferta#zamow" class="btn btn-primary">Opisz swoją stronę →</a><a href="tel:+48797414907" class="btn btn-ghost">Zadzwoń: 797 414 907</a></div>
 </section>
 </main>
 <footer><div class="wrap wide foot">
@@ -124,7 +124,7 @@ def service_page(path, name, price, title, desc, lead, body, faq, from_price=Fal
   <p class="lead">{lead}</p>
   <div class="price-box">
     <div><div class="amount">{'<small>od</small> ' if from_price else ''}{price} <small>zł</small></div><p>Cena końcowa – nie doliczam VAT. Nie obejmuje hostingu ani domeny: stronę publikujesz sam albo zlecasz to mnie (+149 zł).</p></div>
-    <a href="/#zamow" class="btn btn-primary">Zamów – {name.lower()}</a>
+    <a href="/oferta#zamow" class="btn btn-primary">Zamów – {name.lower()}</a>
   </div>
 </div>
 <div class="prose">
@@ -357,7 +357,7 @@ PAGES['blog/strona-wizytowka-czy-promocyjna.html'] = article_page(
 </ul>
 <h2>A może jedno i drugie?</h2>
 <p>Wiele firm zaczyna od strony wizytówki, a potem do konkretnych kampanii dokłada strony promocyjne. Wizytówka buduje obecność firmy w internecie, a strony promocyjne zamieniają ruch z reklam w zapytania. Jeśli nie masz jeszcze żadnej strony – zacznij od wizytówki.</p>
-<p>Nie wiesz, co wybrać? Opisz swój pomysł w <a href="/#zamow">formularzu</a> – podpowiem, co będzie lepsze dla Twojej firmy.</p>''',
+<p>Nie wiesz, co wybrać? Opisz swój pomysł w <a href="/oferta#zamow">formularzu</a> – podpowiem, co będzie lepsze dla Twojej firmy.</p>''',
     [("Czy strona promocyjna to to samo co landing page?", "Tak. Landing page (strona docelowa) to angielska nazwa strony promocyjnej – jednej strony skupionej na jednym celu, na którą zwykle prowadzi reklama."),
      ("Co jest tańsze – wizytówka czy strona promocyjna?", "Strona promocyjna: u mnie kosztuje 799 zł, a strona wizytówka 1490 zł. To ceny końcowe, bez VAT.")],
     rel(ART[1][0]))
@@ -398,7 +398,7 @@ PAGES['blog/co-przygotowac-przed-zamowieniem-strony.html'] = article_page(
 <h2>6. Domena i hosting</h2>
 <p>Warto wcześniej pomyśleć o adresie strony (domenie). Jeśli masz już domenę albo starą stronę – podaj jej adres w formularzu. Nie wiesz, jak założyć domenę i hosting? Publikację strony możesz zlecić mnie za 149 zł. Więcej o kosztach przeczytasz w artykule <a href="/blog/ile-kosztuje-strona-internetowa">Ile kosztuje strona internetowa</a>.</p>
 <h2>Gotowe? Wypełnij formularz</h2>
-<p>Nie musisz mieć wszystkiego – wystarczy opis pomysłu. Resztę uzupełnimy w rozmowie. <a href="/#zamow">Przejdź do formularza</a>.</p>''',
+<p>Nie musisz mieć wszystkiego – wystarczy opis pomysłu. Resztę uzupełnimy w rozmowie. <a href="/oferta#zamow">Przejdź do formularza</a>.</p>''',
     None, rel(ART[2][0]))
 
 blog_cards = ''.join(f'<a class="card" href="/blog/{s}"><b>{esc(t)}</b><span>Czytaj →</span></a>' for s, t in ART)
