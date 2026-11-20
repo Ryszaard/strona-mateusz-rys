@@ -52,6 +52,14 @@ headers = f"""# Plik tworzony automatycznie przez narzedzia/aktualizuj_naglowki.
 
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+/crm
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+/crm/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
 """
 (ROOT / '_headers').write_text(headers, encoding='utf-8')
 print(f'Zapisano _headers ({len(hashes)} skryptów).')

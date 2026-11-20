@@ -282,11 +282,36 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+/* O MNIE */
+#o-mnie{padding:90px 0 110px;overflow:hidden}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.about-photo{position:relative;aspect-ratio:760/1013;max-width:440px;width:100%;margin:0 auto;isolation:isolate}
+.about-photo::before{content:"";position:absolute;inset:14% -6% 4%;border-radius:50%;background:radial-gradient(closest-side,#7c5cff66,#22d3ee26 55%,transparent 75%);filter:blur(30px);z-index:-2;animation:aglow 8s ease-in-out infinite}
+.about-photo::after{content:"";position:absolute;left:50%;top:9%;width:86%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;padding:1.5px;background:conic-gradient(from 210deg,#7c5cff,#22d3ee,transparent 40%,transparent 60%,#7c5cff);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.55;z-index:-1;animation:aspin 26s linear infinite}
+.about-photo img{width:100%;height:100%;object-fit:contain;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.6) 72%,transparent 94%),linear-gradient(to right,transparent,#000 16%,#000 84%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom,#000 50%,rgba(0,0,0,.6) 72%,transparent 94%),linear-gradient(to right,transparent,#000 16%,#000 84%,transparent);mask-composite:intersect;transform:translateY(var(--py,0px));transition:transform .2s linear}
+.about-photo .badge-float{z-index:2}
+.about-photo .ab1{left:-8%;top:66%;animation:float 7s ease-in-out infinite}
+.about-photo .ab2{right:-10%;top:47%;animation:float 8s ease-in-out infinite reverse}
+.about-txt h2{font-size:clamp(30px,4vw,44px);margin:16px 0 18px}
+.about-txt p{color:var(--muted);font-size:17px;margin-bottom:14px;max-width:560px}
+.about-list{list-style:none;display:grid;gap:12px;margin:26px 0 32px}
+.about-list li{display:flex;gap:12px;align-items:flex-start}
+.about-list li i{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:#7c5cff22;color:var(--accent2);font-style:normal;font-size:14px;margin-top:1px}
+.about-sign{font-family:Sora,sans-serif;font-size:15px;color:var(--text);margin-top:4px}
+@keyframes aglow{50%{transform:scale(1.08);opacity:.8}}
+@keyframes aspin{to{transform:translateX(-50%) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.about-photo::before,.about-photo::after,.about-photo .badge-float{animation:none}.about-photo img{transform:none}}
 .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
 @media(max-width:900px){
   .hero-in,.contact-box,.price-wrap{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:34px}
+  .about-photo{max-width:340px}
+  .about-photo .ab1{left:-2%}
+  .about-photo .ab2{right:-2%;top:74%}
+  .about-photo .ab1{top:58%}
+  #o-mnie{padding:60px 0 80px}
   .mock-col{display:none}
   .feat-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
@@ -316,6 +341,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="nav-links" id="navLinks">
       <a href="#oferta">Oferta</a>
       <a href="#realizacje">Realizacje</a>
+      <a href="#o-mnie">O mnie</a>
       <a href="#proces">Jak działam</a>
       <a href="#cennik">Cennik</a>
       <a href="#faq">Pytania</a>
@@ -432,6 +458,29 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div><b>Tu może być Twoja strona</b><span>Opisz swój pomysł w formularzu – zrobię go dla Ciebie.</span></div>
       <span class="pn-arrow">→</span>
     </a>
+  </div>
+</section>
+
+<!-- O MNIE -->
+<section id="o-mnie">
+  <div class="wrap about">
+    <div class="about-photo reveal" id="aboutPhoto">
+      <img src="mateusz-760.webp" srcset="mateusz-440.webp 440w, mateusz-760.webp 760w" sizes="(max-width: 900px) 340px, 440px" width="760" height="1013" alt="Mateusz Ryś – projektant stron internetowych" loading="lazy" decoding="async">
+      <div class="badge-float ab1"><span class="bf-ic">👋</span><div><b>Mateusz Ryś</b><br><span style="color:var(--muted)">twórca stron www</span></div></div>
+      <div class="badge-float ab2"><span class="bf-ic" style="background:#22d3ee22;color:var(--accent2)">1:1</span><b>Kontakt bezpośrednio ze mną</b></div>
+    </div>
+    <div class="about-txt reveal">
+      <span class="tag">O mnie</span>
+      <h2>Cześć, jestem <span class="grad-text">Mateusz</span>.</h2>
+      <p>Projektuję i tworzę nowoczesne strony internetowe dla firm – takie, które dobrze wyglądają, szybko się ładują i świetnie działają na telefonie.</p>
+      <p>Pracujesz bezpośrednio ze mną, bez pośredników i bez agencyjnego zamieszania. Słucham, czego potrzebujesz, i zamieniam Twój pomysł w gotową stronę.</p>
+      <ul class="about-list">
+        <li><i>✓</i><span>Każdą stronę projektuję od zera, pod Twoją firmę</span></li>
+        <li><i>✓</i><span>Jasna cena ustalona przed rozpoczęciem pracy</span></li>
+        <li><i>✓</i><span>Poprawki, dopóki strona nie będzie taka, jak chcesz</span></li>
+      </ul>
+      <a href="#zamow" class="btn btn-primary">Porozmawiajmy o Twojej stronie →</a>
+    </div>
   </div>
 </section>
 
@@ -888,6 +937,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   // Reveal
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // O mnie – zdjęcie lekko przesuwa się przy przewijaniu
+  const ap = document.getElementById('aboutPhoto');
+  if (ap && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const img = ap.querySelector('img'); let tick = false;
+    const upd = () => { const r = ap.getBoundingClientRect(); const c = (r.top + r.height/2 - innerHeight/2) / innerHeight; img.style.setProperty('--py', (c * -24).toFixed(1) + 'px'); tick = false; };
+    addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true }); upd();
+  }
 
   // Package buttons from pricing + "old site" field
   const oldField = document.getElementById('oldSiteField'), oldSite = document.getElementById('oldSite');
@@ -1089,6 +1145,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Strony internetowe": "Websites",
     "Oferta": "Services",
     "Realizacje": "Portfolio",
+    "O mnie": "About me",
+    "Cześć, jestem": "Hi, I'm",
+    "Mateusz": "Mateusz",
+    "twórca stron www": "web designer",
+    "Kontakt bezpośrednio ze mną": "You work directly with me",
+    "Mateusz Ryś – projektant stron internetowych": "Mateusz Ryś – web designer",
+    "Projektuję i tworzę nowoczesne strony internetowe dla firm – takie, które dobrze wyglądają, szybko się ładują i świetnie działają na telefonie.": "I design and build modern websites for businesses – sites that look great, load fast and work perfectly on phones.",
+    "Pracujesz bezpośrednio ze mną, bez pośredników i bez agencyjnego zamieszania. Słucham, czego potrzebujesz, i zamieniam Twój pomysł w gotową stronę.": "You work directly with me – no middlemen, no agency runaround. I listen to what you need and turn your idea into a finished website.",
+    "Każdą stronę projektuję od zera, pod Twoją firmę": "Every website designed from scratch for your business",
+    "Jasna cena ustalona przed rozpoczęciem pracy": "A clear price agreed before any work starts",
+    "Poprawki, dopóki strona nie będzie taka, jak chcesz": "Revisions until the website is exactly how you want it",
+    "Porozmawiajmy o Twojej stronie →": "Let's talk about your website →",
     "Jak działam": "How I work",
     "Cennik": "Pricing",
     "Pytania": "FAQ",
