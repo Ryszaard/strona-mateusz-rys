@@ -1,30 +1,36 @@
 # Mateusz Ryś – Strony internetowe
 
-> Mateusz Ryś projektuje i tworzy nowoczesne, szybkie i dopasowane do telefonów strony internetowe dla firm w Polsce: strony promocyjne (799 zł), strony wizytówki (1490 zł), strony firmowe do 8 podstron (od 2490 zł) i odświeżanie starych stron (od 990 zł). Ceny są końcowe, bez doliczania VAT. Każda strona to indywidualny projekt od zera, bez gotowych szablonów. Klient pracuje bezpośrednio z Mateuszem, bez pośredników i agencji. Po zakończeniu dostaje gotowe pliki strony i sam umieszcza ją na wybranym hostingu. Obsługa po polsku i angielsku.
+> Mateusz Ryś projektuje i tworzy nowoczesne, szybkie i dopasowane do telefonów strony internetowe dla firm w Polsce: strony promocyjne (799 zł), strony wizytówki (1490 zł), strony firmowe do 8 podstron (od 2490 zł) i odświeżanie starych stron (od 990 zł). Ceny są końcowe, bez doliczania VAT. Każda strona to indywidualny projekt od zera, bez gotowych szablonów. Klient pracuje bezpośrednio z Mateuszem, bez pośredników i agencji. Po zakończeniu dostaje gotowe pliki strony i publikuje ją sam albo zleca publikację Mateuszowi (149 zł). Obsługa po polsku i angielsku.
 
 ## Oferta
 
-- [Strona promocyjna](https://mateuszrys.pl/#cennik): 799 zł, 2 rundy poprawek w cenie. Jedna krótka, przewijana strona pod konkretną usługę, promocję lub wydarzenie, skupiona na jednym celu (telefon, zapis, zakup).
-- [Strona wizytówka](https://mateuszrys.pl/#cennik): 1490 zł, najczęściej wybierana. Do 5 podstron z indywidualnym projektem graficznym, założenie Wizytówki Google, sekcje o firmie, oferta, galeria i kontakt, wersja na telefon, tablet i komputer, podstawowa optymalizacja pod Google, poprawki do pełnego zadowolenia.
+- [Strona promocyjna](https://mateuszrys.pl/strona-promocyjna): 799 zł, 2 rundy poprawek w cenie. Jedna krótka, przewijana strona pod konkretną usługę, promocję lub wydarzenie, skupiona na jednym celu (telefon, zapis, zakup).
+- [Strona wizytówka](https://mateuszrys.pl/strona-wizytowka): 1490 zł, najczęściej wybierana. Do 5 podstron z indywidualnym projektem graficznym, założenie Wizytówki Google, sekcje o firmie, oferta, galeria i kontakt, wersja na telefon, tablet i komputer, podstawowa optymalizacja pod Google, poprawki do pełnego zadowolenia.
 - [Strona firmowa](https://mateuszrys.pl/#cennik): od 2490 zł. Do 8 podstron.
-- [Odświeżenie strony](https://mateuszrys.pl/#cennik): od 990 zł. Nowy wygląd starej strony, dostosowanie do telefonów, uporządkowanie treści, szybsze ładowanie i lepsza widoczność w Google.
+- [Odświeżenie strony](https://mateuszrys.pl/odswiezenie-strony): od 990 zł. Nowy wygląd starej strony, dostosowanie do telefonów, uporządkowanie treści, szybsze ładowanie i lepsza widoczność w Google.
 - Dodatki: dodatkowa podstrona 199 zł, publikacja strony (domena i hosting) 149 zł, teksty od 299 zł, wersja angielska +30%, opieka nad stroną od 79 zł/mies.
-- Ceny nie obejmują hostingu ani domeny. Ostateczna cena zależy od ilości treści i funkcji i jest ustalana przed rozpoczęciem pracy.
+- Ceny są końcowe (bez doliczania VAT) i nie obejmują hostingu ani domeny – te klient opłaca bezpośrednio u dostawcy. Dokładna wycena jest ustalana przed rozpoczęciem pracy.
 
 ## Jak wygląda współpraca
 
 1. Klient opisuje pomysł w formularzu: dane firmy, logo, inspiracje, kolory.
 2. Kontakt i wycena: omówienie szczegółów i ustalenie ostatecznej ceny.
 3. Projekt i realizacja: podgląd strony i wprowadzanie poprawek.
-4. Odbiór: klient dostaje gotowe pliki strony i publikuje ją na swoim hostingu.
+4. Odbiór: klient dostaje gotowe pliki strony i publikuje ją sam albo zleca publikację Mateuszowi (149 zł).
 
 ## Częste pytania
 
 - Czas wykonania strony wizytówki: zwykle od kilku dni do dwóch tygodni, zależnie od ilości treści i tempa dostarczenia materiałów.
 - Brak tekstów lub zdjęć nie jest problemem – Mateusz pomaga je przygotować.
-- Mateusz nie publikuje strony w internecie – klient dostaje pliki, a hosting i domenę załatwia sam.
+- Publikacja: klient może opublikować stronę sam albo zlecić to Mateuszowi za 149 zł (pomoc z domeną i hostingiem, uruchomienie strony). Opłaty za domenę i hosting klient płaci bezpośrednio dostawcy.
 - Każda strona działa na telefonie, tablecie i komputerze.
 - Poprawki są wprowadzane w trakcie pracy, aż efekt będzie taki, jak chce klient.
+
+## Poradnik
+
+- [Ile kosztuje strona internetowa dla firmy w 2026 roku?](https://mateuszrys.pl/blog/ile-kosztuje-strona-internetowa): od czego zależy cena, co jest w cenie, koszty domeny i hostingu.
+- [Strona wizytówka czy strona promocyjna – co wybrać?](https://mateuszrys.pl/blog/strona-wizytowka-czy-promocyjna): porównanie i wskazówki wyboru.
+- [Co przygotować przed zamówieniem strony internetowej?](https://mateuszrys.pl/blog/co-przygotowac-przed-zamowieniem-strony): lista kontrolna dla klienta.
 
 ## Realizacje
 
@@ -37,3 +43,4 @@
 - E-mail: mateuszrys1805@gmail.com
 - Telefon: +48 797 414 907
 - Obszar działania: cała Polska (zdalnie)
+- English version: https://mateuszrys.pl/en/
