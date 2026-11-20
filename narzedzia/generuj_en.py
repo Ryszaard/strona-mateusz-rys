@@ -68,7 +68,7 @@ for el in soup.find_all(True):
 # 4. Nagłówek dokumentu
 soup.html['lang'] = 'en'
 title_pl = 'Mateusz Ryś – Strony internetowe'
-soup.title.string = 'Mateusz Ryś – Websites for businesses | Web design from 519 PLN'
+soup.title.string = 'Mateusz Ryś – Websites for businesses | Web design from 799 PLN'
 md = soup.find('meta', attrs={'name': 'description'})
 md['data-pl'] = md['content']
 md['content'] = EN[md['content']]
@@ -79,7 +79,7 @@ og('og:locale:alternate')['content'] = 'pl_PL'
 og('og:url')['content'] = SITE + '/en/'
 og('og:site_name')['content'] = 'Mateusz Ryś – Websites'
 og('og:title')['content'] = 'Mateusz Ryś – Websites for businesses'
-og('og:description')['content'] = 'Modern websites for businesses. Custom design, mobile-friendly, prices from 519 PLN.'
+og('og:description')['content'] = 'Modern websites for businesses. Custom design, mobile-friendly, prices from 799 PLN.'
 og('og:image:alt')['content'] = 'Mateusz Ryś – Websites. A website that sells your business for you.'
 
 # 5. Dane strukturalne: FAQ po angielsku, opis firmy po angielsku
