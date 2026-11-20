@@ -110,3 +110,14 @@ albo do panelu hostingu. W kodzie wyłącznie nazwa zmiennej.
 3. Cofnij ostatnią zmianę: GitHub → zakładka **Commits** → wybierz ostatnią działającą wersję.
 4. Jeśli to nie pomoże: pobierz ostatni ZIP z dysku i wgraj go ponownie do repozytorium.
 5. Kontakt: Marcin Dutkiewicz (mentor).
+
+## Struktura (od 20.11.2026)
+- `/` – strona główna ze sceną 3D (BMW, tablica MATEUSZRYS.PL). Źródła: `zrodla/strona-glowna` (instrukcja w `JAK-ZBUDOWAC.md`).
+- `/oferta` (`oferta.html`) – dawna strona główna: oferta, cennik, o mnie, formularz zamówienia. Wersja EN `/en/` generowana z `oferta.html` (`narzedzia/generuj_en.py`).
+
+## CRM (zamówienia)
+- Formularz na `/oferta` zapisuje zamówienie przez `functions/api/zamowienie.js` w bazie Cloudflare D1 `crm` (wiązanie `DB`) i dostaje numer `MR-RRRR-NNNN`.
+- Potem FormSubmit wysyła mail do Mateusza (numer w temacie) i potwierdzenie do klienta (`_autoresponse`).
+- Panel: `https://mateuszrys.pl/crm` – logowanie Cloudflare Access (kod z maila, tylko mateuszrys1805@gmail.com).
+  API panelu `functions/api/crm/[[path]].js` dodatkowo sprawdza token Access (`lib/access.js`, zmienne ACCESS_TEAM_DOMAIN, ACCESS_AUD, ACCESS_ALLOWED_EMAIL).
+- Schemat bazy: `migrations/0001_crm.sql`.

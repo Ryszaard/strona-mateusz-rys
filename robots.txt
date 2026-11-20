@@ -1,55 +1,89 @@
 # Wszystkie wyszukiwarki i boty AI mają pełny dostęp
 User-agent: *
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 # Wyszukiwarki
 User-agent: Googlebot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: YandexBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 # Boty AI (ChatGPT, Claude, Perplexity, Gemini, Copilot, Apple)
 User-agent: GPTBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Applebot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 User-agent: CCBot
 Allow: /
+Disallow: /crm
+Disallow: /api/
 
 Sitemap: https://mateuszrys.pl/sitemap.xml

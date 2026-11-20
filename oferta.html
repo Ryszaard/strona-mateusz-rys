@@ -375,6 +375,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @keyframes aglow{50%{transform:scale(1.08);opacity:.8}}
 @keyframes aspin{to{transform:translateX(-50%) rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.about-photo::before,.about-photo::after,.about-photo .badge-float{animation:none}.about-photo img{transform:none}}
+.order-no{margin:-4px auto 14px;font-size:16px;color:var(--text)}.order-no b{font-family:Sora,sans-serif;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:18px}
 .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
@@ -757,6 +758,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="done-box" id="doneBox">
         <div class="big"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
         <h3 id="doneTitle">Dziękuję za zgłoszenie!</h3>
+        <p id="orderNo" class="order-no" style="display:none">Numer Twojego zamówienia: <b></b><span id="orderMail"> Potwierdzenie wysłałem na Twój adres e-mail.</span></p>
         <p id="doneText">Twoje zapytanie zostało wysłane. Skontaktuję się z Tobą najszybciej, jak to możliwe – zwykle w ciągu 24 godzin.</p>
         <p id="logoNote" style="display:none">Jeśli dodałeś logo, prześlij je proszę także na <b>mateuszrys1805@gmail.com</b> – w odpowiedzi na moją wiadomość.</p>
         <div class="fallback" id="fallback">
@@ -839,9 +841,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <h3>4. Komu przekazuję dane</h3>
 <p>Nie sprzedaję Twoich danych i nie przekazuję ich w celach marketingowych. Dostęp do nich mogą mieć wyłącznie dostawcy usług, z których korzystam przy prowadzeniu działalności:</p>
 <ul>
-<li><b>FormSubmit</b> (formsubmit.co) – usługa, która przekazuje treść formularza na mój adres e-mail,</li>
+<li><b>FormSubmit</b> (formsubmit.co) – usługa, która przekazuje treść formularza na mój adres e-mail i wysyła Ci potwierdzenie zamówienia,</li>
 <li><b>Google</b> (Gmail) – dostawca mojej skrzynki e-mail,</li>
-<li><b>Cloudflare</b> – dostawca hostingu, na którym działa ta strona, oraz anonimowych statystyk odwiedzin.</li>
+<li><b>Cloudflare</b> – dostawca hostingu, na którym działa ta strona, bazy danych, w której zapisuję zamówienia z formularza (moja lista zamówień, dostępna tylko dla mnie), oraz anonimowych statystyk odwiedzin. Do ochrony przed spamem zapisuję przy zamówieniu jedynie zaszyfrowany skrót adresu IP (nie da się z niego odczytać adresu).</li>
 </ul>
 
 <h3>5. Przekazywanie danych poza EOG</h3>
@@ -907,9 +909,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <h3>4. Who receives your data</h3>
 <p>I do not sell your data or share it for marketing purposes. Only the service providers I use to run my business may have access to it:</p>
 <ul>
-<li><b>FormSubmit</b> (formsubmit.co) – a service that forwards the form contents to my email address,</li>
+<li><b>FormSubmit</b> (formsubmit.co) – a service that forwards the form contents to my email address and sends you an order confirmation,</li>
 <li><b>Google</b> (Gmail) – my email provider,</li>
-<li><b>Cloudflare</b> – the hosting provider that runs this website, and anonymous visit statistics.</li>
+<li><b>Cloudflare</b> – the hosting provider that runs this website, the database where I store orders from the form (my order list, accessible only to me), and anonymous visit statistics. To protect against spam I only store a hashed fingerprint of the IP address with an order (the address cannot be read from it).</li>
 </ul>
 
 <h3>5. Transfers outside the EEA</h3>
@@ -1157,10 +1159,32 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     if(Date.now() - last < 60000){ rodoErr.textContent = t('Zgłoszenie zostało już wysłane. Odczekaj minutę przed kolejnym.'); rodoErr.style.display='block'; return; }
     nextBtn.disabled = true; nextBtn.textContent = t('Wysyłanie…');
     const data = collect();
-    const payload = {_subject:'Nowe zapytanie o stronę internetową', _template:'table', _captcha:'false'};
+    const isEn = !!(window.getLang && getLang()==='en');
+    // 1) Zapis zamówienia w CRM – zwraca numer zamówienia (jeśli się nie uda, i tak wysyłamy maila)
+    let number = null;
+    try{
+      const r = await fetch('/api/zamowienie', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({fields: Object.fromEntries(data), lang: isEn ? 'en' : 'pl', hp: hp ? hp.value : '', elapsed: Date.now() - FORM_START})
+      });
+      const j = await r.json().catch(()=>({}));
+      if(j && j.ok && j.number) number = j.number;
+    }catch(e){}
+    // 2) Mail do mnie + potwierdzenie dla klienta (FormSubmit)
+    const get = k => (data.find(([kk])=>kk===k) || [,''])[1];
+    const name = get('Imię i nazwisko'), pkg = get('Pakiet');
+    const first = name.trim().split(/\s+/)[0] || name;
+    const payload = {
+      _subject: number ? `Nowe zamówienie ${number} – ${name}` : `Nowe zapytanie o stronę internetową – ${name}`,
+      _template:'table', _captcha:'false'
+    };
+    if(number) payload['Numer zamówienia'] = number;
     data.forEach(([k,v])=> payload[k]=v);
     payload['Informacja RODO'] = 'Klient potwierdził zapoznanie się z informacją o przetwarzaniu danych';
-    payload['Język formularza'] = (window.getLang && getLang()==='en') ? 'angielski' : 'polski';
+    payload['Język formularza'] = isEn ? 'angielski' : 'polski';
+    payload._autoresponse = isEn
+      ? `Hi ${first}!\n\nThank you for your website order${number ? ' – your order number is ' + number : ''}.${pkg ? '\nPackage: ' + t(pkg) + '.' : ''}\n\nI have received your description and will get back to you to agree the details and the final price.${logoInput.files[0] ? '\n\nPlease send your logo file to ' + EMAIL + (number ? ' with the order number ' + number + ' in the subject' : '') + '.' : ''}\n\nBest regards,\nMateusz Ryś – Websites\nmateuszrys.pl · +48 797 414 907`
+      : `Cześć ${first}!\n\nDziękuję za zamówienie strony internetowej${number ? ' – numer Twojego zamówienia to ' + number : ''}.${pkg ? '\nPakiet: ' + pkg + '.' : ''}\n\nOtrzymałem Twój opis. Odezwę się, żeby ustalić szczegóły i ostateczną cenę.${logoInput.files[0] ? '\n\nLogo wyślij proszę na ' + EMAIL + (number ? ' – w temacie wpisz numer ' + number : '') + '.' : ''}\n\nPozdrawiam,\nMateusz Ryś – Strony internetowe\nmateuszrys.pl · tel. 797 414 907`;
     let sent = false;
     try{
       const res = await fetch(FORM_ENDPOINT, {
@@ -1169,14 +1193,19 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       const j = await res.json().catch(()=>({}));
       sent = res.ok && (j.success === true || j.success === 'true');
     }catch(e){ sent = false; }
-    if(sent){ try{ localStorage.setItem('lastFormSent', String(Date.now())); }catch(e){} }
-    showDone(sent, data);
+    if(sent || number){ try{ localStorage.setItem('lastFormSent', String(Date.now())); }catch(e){} }
+    if(!sent && number){ try{ document.getElementById('orderMail').style.display='none'; }catch(e){} }
+    showDone(sent || !!number, data, number);
   }
-  function showDone(sent, data){
+  function showDone(sent, data, number){
 
     form.style.display='none';
     const done = document.getElementById('doneBox'); done.style.display='block';
     if(sent){
+      if(number){
+        const n = document.getElementById('orderNo');
+        n.querySelector('b').textContent = number; n.style.display = 'block';
+      }
       if(logoInput.files[0]) document.getElementById('logoNote').style.display='block';
     }else{
       document.getElementById('doneTitle').textContent = t('Prawie gotowe!');
@@ -1204,6 +1233,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Strony internetowe": "Websites",
     "Oferta": "Services",
     "Realizacje": "Portfolio",
+    "Numer Twojego zamówienia:": "Your order number:",
+    "Potwierdzenie wysłałem na Twój adres e-mail.": "I have sent a confirmation to your email address.",
     "O mnie": "About me",
     "Cześć, jestem": "Hi, I'm",
     "Mateusz": "Mateusz",
