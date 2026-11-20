@@ -1,7 +1,7 @@
 # Plik tworzony automatycznie przez narzedzia/aktualizuj_naglowki.py – nie edytuj ręcznie.
 /*
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-9MNSVVSm3r5EpRdtLlg/IYn7iMEY0xMJ+RvszmQCF2E=' 'sha256-ANKcBbrh6gzs2V35fmkBor5jzMt4OMd5W4oTw0hRaDI=' 'sha256-GLvXTil0b+HDyBC+IKoPbfcLamqUdfaDs+9EhtRo+Es=' 'sha256-Y45lAE3aovUodtpKTx6A+X+cxlG8yJzqCDdj7+RRPrM=' 'sha256-nHI3KJmxy6NngPqd7FQg4fXHiPxitlaIJC9hUR5io1E=' 'sha256-rk6IcYwdi/9fSHUnsSHkvNrQY5tbmI36VxwPN0h3h48='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://formsubmit.co https://cloudflareinsights.com; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-9MNSVVSm3r5EpRdtLlg/IYn7iMEY0xMJ+RvszmQCF2E=' 'sha256-ANKcBbrh6gzs2V35fmkBor5jzMt4OMd5W4oTw0hRaDI=' 'sha256-GLvXTil0b+HDyBC+IKoPbfcLamqUdfaDs+9EhtRo+Es=' 'sha256-Y45lAE3aovUodtpKTx6A+X+cxlG8yJzqCDdj7+RRPrM=' 'sha256-rk6IcYwdi/9fSHUnsSHkvNrQY5tbmI36VxwPN0h3h48='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://formsubmit.co https://cloudflareinsights.com; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
