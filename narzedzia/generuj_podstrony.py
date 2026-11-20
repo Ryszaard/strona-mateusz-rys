@@ -102,7 +102,7 @@ def page(path, title, desc, body, ld, crumbs, current=None, og_type="website"):
 </section>
 </main>
 <footer><div class="wrap wide foot">
-  <nav aria-label="Usługi">{services} · <a href="/blog/">Poradnik</a> · <a href="/realizacje/m4">Realizacje</a></nav>
+  <nav aria-label="Usługi">{services} · <a href="/blog/">Poradnik</a> · <a href="/oferta#realizacje">Realizacje</a></nav>
   <div>© 2026 Mateusz Ryś – Strony internetowe · <a href="tel:+48797414907">797 414 907</a> · <a href="mailto:mateuszrys1805@gmail.com">mateuszrys1805@gmail.com</a> · <a href="/polityka-prywatnosci">Polityka prywatności</a></div>
 </div></footer>
 </body>

@@ -34,7 +34,7 @@
 
 ## Realizacje
 
-- [BMW M4 Competition – strona prezentacyjna](https://mateuszrys.pl/realizacje/m4): projekt koncepcyjny, jednostronicowa prezentacja samochodu ze sceną 3D nocnej drogi w deszczu i animacjami sterowanymi przewijaniem.
+- [Strona główna mateuszrys.pl](https://mateuszrys.pl/): pokaz możliwości – nocna scena 3D w deszczu, samochód z tablicą MATEUSZRYS.PL nadjeżdża podczas przewijania, animacje sterowane przewijaniem, tryb lekki dla słabszych komputerów.
 
 ## Kontakt
 
