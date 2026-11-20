@@ -14,6 +14,8 @@ Wersja polska i angielska, formularz zamówienia, cennik, portfolio, polityka pr
 | `404.html` | Strona „nie znaleziono” (PL/EN) – hosting pokazuje ją sam przy złym adresie |
 | `_headers` | Nagłówki bezpieczeństwa dla Cloudflare Pages (tworzony automatycznie, patrz niżej) |
 | `robots.txt`, `sitemap.xml` | Informacje dla Google: co indeksować i jakie są podstrony |
+| `llms.txt` | Opis firmy dla ChatGPT, Claude, Perplexity i innych AI |
+| `a5075557595f4e6cb22cefcf03d4913b.txt` | Klucz IndexNow – pozwala szybko zgłaszać zmiany do Binga i innych wyszukiwarek. Nie usuwać. |
 | `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png` | Ikonki strony (karta przeglądarki, telefon, Google) |
 | `og-image.jpg` | Obrazek, który pokazuje się przy udostępnieniu linku na Facebooku itp. (1200×630) |
 | `narzedzia/aktualizuj_naglowki.py` | Skrypt, który tworzy plik `_headers` |
@@ -28,6 +30,7 @@ Strona nie wymaga budowania – to zwykłe pliki HTML. Wystarczy je wgrać na ho
 - Hosting: **Cloudflare Pages**, projekt `mateuszrys` → https://mateuszrys.pages.dev
 - Statystyki odwiedzin: Cloudflare Web Analytics (bez cookies) – panel Cloudflare → Pages → mateuszrys → Metrics.
 - Google Search Console: usługa „mateuszrys.pl” (domena), weryfikacja rekordem TXT w Cloudflare – **nie usuwać** tego rekordu.
+- Bing Webmaster Tools: mateuszrys.pl zaimportowane z Google Search Console (20.11.2026). Bing zasila też DuckDuckGo, Yahoo, Ecosia i wyszukiwanie w ChatGPT.
 - Przekierowania: Cloudflare → mateuszrys.pl → Rules → „Redirect from WWW to root” oraz SSL/TLS → Always Use HTTPS.
 - DNSSEC: włączony w Cloudflare (DNS → Settings), rekord DS dodany w OVH (zakładka „Rekordy DS”).
   Przy zmianie serwerów DNS w przyszłości najpierw usunąć rekord DS w OVH, inaczej domena przestanie działać.

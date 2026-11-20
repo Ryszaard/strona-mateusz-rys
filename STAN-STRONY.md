@@ -34,5 +34,12 @@
 - Włączone Always Use HTTPS. Sprawdzone: strona, nagłówki bezpieczeństwa, statystyki, 404, sitemap i realizacja M4 działają pod mateuszrys.pl.
 - Formularz aktywowany i przetestowany.
 
+## Co zrobiliśmy (20.11.2026)
+- Widoczność w AI: `llms.txt` z opisem oferty, `robots.txt` jawnie wpuszcza wyszukiwarki i boty AI (GPTBot, ClaudeBot, PerplexityBot, Google-Extended i inne).
+- Dane strukturalne FAQPage (częste pytania) na stronie głównej.
+- Realizacja M4: opis, canonical i Open Graph.
+- Search Console: strona główna i /realizacje/m4 są w indeksie Google.
+- Bing Webmaster Tools: import z Search Console, klucz IndexNow.
+
 ## Następny krok
 Strona gotowa do ogłoszenia. Za kilka dni: Search Console (czy mapa strony pobrana). Na bieżąco: dodawać realizacje i prawdziwe opinie klientów.
