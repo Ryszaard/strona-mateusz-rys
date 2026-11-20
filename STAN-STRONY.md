@@ -41,5 +41,10 @@
 - Search Console: strona główna i /realizacje/m4 są w indeksie Google.
 - Bing Webmaster Tools: import z Search Console, klucz IndexNow.
 
+- Podstrony usług: /strona-promocyjna, /strona-wizytowka, /odswiezenie-strony (opis, cena, FAQ, dane dla Google).
+- Poradnik /blog/ z 3 artykułami (ceny stron, wizytówka czy promocyjna, co przygotować przed zamówieniem).
+- Wersja angielska pod /en/ (hreflang), przycisk PL/EN przenosi między adresami.
+- favicon.ico.
+
 ## Następny krok
 Strona gotowa do ogłoszenia. Za kilka dni: Search Console (czy mapa strony pobrana). Na bieżąco: dodawać realizacje i prawdziwe opinie klientów.

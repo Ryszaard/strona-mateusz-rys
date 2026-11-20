@@ -6,6 +6,9 @@
 <title>Mateusz Ryś – Strony internetowe</title>
 <meta name="description" content="Nowoczesne strony internetowe dla firm: strona promocyjna od 519 zł, wizytówka od 909 zł, odświeżenie od 650 zł. Indywidualny projekt i wersja na telefon.">
 <link rel="canonical" href="https://mateuszrys.pl/">
+<link rel="alternate" hreflang="pl" href="https://mateuszrys.pl/">
+<link rel="alternate" hreflang="en" href="https://mateuszrys.pl/en/">
+<link rel="alternate" hreflang="x-default" href="https://mateuszrys.pl/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -336,6 +339,10 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);
 .c-item .ic{width:46px;height:46px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;flex-shrink:0}
 .c-item small{color:var(--muted);display:block;font-size:13px}
 .c-item b{font-size:16px;word-break:break-all}
+.more-link{display:inline-block;margin:-4px 0 18px;font-size:14px;color:var(--accent2);font-weight:600}
+.more-link:hover{text-decoration:underline}
+.f-nav{flex-basis:100%;display:flex;flex-wrap:wrap;gap:6px 18px}
+.f-nav a{color:var(--muted)} .f-nav a:hover{color:var(--text)}
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
@@ -551,6 +558,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="price reveal">
         <h3>Strona promocyjna</h3>
         <p class="desc">Jedna krótka strona pod konkretną usługę, promocję lub wydarzenie.</p>
+        <a href="/strona-promocyjna" class="more-link">Więcej o stronie promocyjnej →</a>
         <div class="amount">519 – 909 <small>zł</small></div>
         <ul>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Jednostronicowy, przewijany projekt</li>
@@ -565,6 +573,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <span class="pop">Najczęściej wybierana</span>
         <h3>Strona wizytówka</h3>
         <p class="desc">Idealna dla firm, które chcą profesjonalnie zaistnieć w internecie.</p>
+        <a href="/strona-wizytowka" class="more-link">Więcej o stronie wizytówce →</a>
         <div class="amount">909 – 1300 <small>zł</small></div>
         <ul>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Indywidualny projekt graficzny</li>
@@ -581,6 +590,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="price reveal">
         <h3>Odświeżenie strony</h3>
         <p class="desc">Masz starą, przestarzałą stronę? Nadam jej nowoczesny wygląd.</p>
+        <a href="/odswiezenie-strony" class="more-link">Więcej o odświeżeniu strony →</a>
         <div class="amount">650 – 1560 <small>zł</small></div>
         <ul>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Nowy, nowoczesny wygląd strony</li>
@@ -782,6 +792,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <details class="reveal"><summary>Czy strona będzie działać na telefonie?</summary><p>Tak, każda strona jest dopasowana do różnych ekranów – wygląda dobrze na telefonie, tablecie i komputerze.</p></details>
       <details class="reveal"><summary>Czy mogę zgłaszać poprawki?</summary><p>Oczywiście. Pokazuję podgląd strony w trakcie pracy i wprowadzam Twoje uwagi, aż efekt będzie taki, jak chcesz.</p></details>
     </div>
+    <p class="reveal" style="text-align:center;margin-top:26px"><a href="/blog/" class="more-link">Więcej odpowiedzi znajdziesz w poradniku →</a></p>
   </div>
 </section>
 
@@ -950,6 +961,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <footer>
   <div class="wrap">
     <span>© <span id="yr"></span> Mateusz Ryś – Strony internetowe</span>
+    <nav class="f-nav" aria-label="Usługi"><a href="/strona-promocyjna">Strona promocyjna</a><a href="/strona-wizytowka">Strona wizytówka</a><a href="/odswiezenie-strony">Odświeżenie strony</a><a href="/blog/">Poradnik</a><a href="/realizacje/m4">Realizacje</a></nav>
     <span class="f-links"><a href="tel:+48797414907">797 414 907</a> · <a href="mailto:mateuszrys1805@gmail.com">mateuszrys1805@gmail.com</a> · <a href="polityka-prywatnosci.html" class="pol-link">Polityka prywatności</a></span>
   </div>
 </footer>
@@ -1281,6 +1293,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "przejrzyście": "transparent",
     "Ostateczna cena zależy od ilości treści i funkcji – dokładną wycenę dostaniesz po wypełnieniu formularza.": "The final price depends on the amount of content and features – you'll get an exact quote after filling in the form.",
     "Strona promocyjna": "Promo page",
+    "Więcej o stronie promocyjnej →": "More about promo pages (PL) →",
+    "Więcej o stronie wizytówce →": "More about business card sites (PL) →",
+    "Więcej o odświeżeniu strony →": "More about website refresh (PL) →",
+    "Więcej odpowiedzi znajdziesz w poradniku →": "More answers in my guide (in Polish) →",
+    "Poradnik": "Guide (PL)",
+    "Usługi": "Services",
     "Jedna krótka strona pod konkretną usługę, promocję lub wydarzenie.": "A single, short page for a specific service, promotion or event.",
     "zł": "PLN",
     "Jednostronicowy, przewijany projekt": "One-page, scrolling design",
@@ -1499,8 +1517,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   const REV = {}; for (const k in EN) if (!(EN[k] in REV)) REV[EN[k]] = k;
   const norm = s => s.replace(/\s+/g, ' ').trim();
 
-  let lang = 'pl';
-  try { lang = localStorage.getItem('lang') || ((navigator.language||'pl').toLowerCase().startsWith('pl') ? 'pl' : 'en'); } catch(e) {}
+  // Język wynika z adresu: / = polski, /en/ = angielski (każda wersja ma własny adres dla Google).
+  let lang = document.documentElement.lang === 'en' ? 'en' : 'pl';
 
   window.t = s => lang === 'en' ? (EN[s] || s) : s;
   window.getLang = () => lang;
@@ -1535,7 +1553,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     if (window.__refreshUI) window.__refreshUI();
   }
   window.setLang = l => { lang = l; try { localStorage.setItem('lang', l); } catch(e) {} apply(); };
-  document.querySelectorAll('.lang-switch button').forEach(b => b.addEventListener('click', () => window.setLang(b.dataset.lang)));
+  document.querySelectorAll('.lang-switch button').forEach(b => b.addEventListener('click', () => {
+    const l = b.dataset.lang; if (l === lang) return;
+    try { localStorage.setItem('lang', l); } catch(e) {}
+    location.href = (l === 'en' ? '/en/' : '/') + location.hash;
+  }));
   // keep form values Polish for the email: give every <option> an explicit Polish value
   document.querySelectorAll('select option').forEach(o => { if (!o.hasAttribute('value')) o.value = norm(o.textContent); });
   apply();

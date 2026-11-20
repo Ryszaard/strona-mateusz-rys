@@ -10,6 +10,12 @@ Wersja polska i angielska, formularz zamówienia, cennik, portfolio, polityka pr
 | `index.html` | Strona główna (cały wygląd, teksty PL/EN i formularz w jednym pliku) |
 | `polityka-prywatnosci.html` | Polityka prywatności (PL/EN) |
 | `fonts/` | Czcionki Sora i Inter – ładowane z własnego serwera, bez Google Fonts |
+| `en/index.html` | Angielska wersja strony głównej – **tworzona automatycznie** z `index.html` (patrz niżej) |
+| `strona-promocyjna.html`, `strona-wizytowka.html`, `odswiezenie-strony.html` | Podstrony usług – **tworzone automatycznie** |
+| `blog/` | Poradnik (artykuły) – **tworzony automatycznie** |
+| `podstrony.css` | Wygląd podstron usług i poradnika |
+| `favicon.ico` | Ikonka dla starszych przeglądarek i robotów |
+| `narzedzia/generuj_en.py`, `narzedzia/generuj_podstrony.py` | Skrypty tworzące wersję EN, podstrony usług i poradnik |
 | `realizacje/` | Portfolio: strona BMW M4 (`m4.html`) i jej zrzuty ekranu |
 | `404.html` | Strona „nie znaleziono” (PL/EN) – hosting pokazuje ją sam przy złym adresie |
 | `_headers` | Nagłówki bezpieczeństwa dla Cloudflare Pages (tworzony automatycznie, patrz niżej) |
@@ -56,6 +62,18 @@ Zabezpieczenia w przeglądarce (index.html):
 Formularz wysyła na losowy alias FormSubmit (stała `FORM_ENDPOINT` w `index.html`), aktywowany dla mateuszrys.pl.
 Jeśli zmieni się domena, FormSubmit przyśle nowy mail aktywacyjny – trzeba kliknąć „Activate Form”.
 Po podłączeniu Cloudflare: ochrona Turnstile i limit wysyłek po stronie serwera.
+
+## Wersja angielska, podstrony usług i poradnik
+
+- Język strony wynika z adresu: `/` to wersja polska, `/en/` angielska. Przycisk PL/EN przenosi między nimi.
+- `en/index.html` **nie edytuj ręcznie**. Po każdej zmianie `index.html` uruchom:
+
+      python narzedzia/generuj_en.py
+      python narzedzia/aktualizuj_naglowki.py
+
+  Nowe teksty dopisz do słownika `EN` w `index.html` – skrypt wypisze te, których brakuje.
+- Treść podstron usług i artykułów jest w `narzedzia/generuj_podstrony.py`. Po zmianie: `python narzedzia/generuj_podstrony.py`.
+  Nowy artykuł: dopisz go do listy `ART`, dodaj stronę w `PAGES` i adres w `sitemap.xml` oraz `llms.txt`.
 
 ## Nagłówki bezpieczeństwa (`_headers`)
 

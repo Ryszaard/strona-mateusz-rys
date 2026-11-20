@@ -4,9 +4,9 @@
 
 ## Oferta
 
-- [Strona promocyjna](https://mateuszrys.pl/#cennik): 519–909 zł. Jedna krótka, przewijana strona pod konkretną usługę, promocję lub wydarzenie, skupiona na jednym celu (telefon, zapis, zakup).
-- [Strona wizytówka](https://mateuszrys.pl/#cennik): 909–1300 zł, najczęściej wybierana. Indywidualny projekt graficzny, sekcje o firmie, oferta, galeria i kontakt, wersja na telefon, tablet i komputer, podstawowa optymalizacja pod Google, poprawki do pełnego zadowolenia.
-- [Odświeżenie strony](https://mateuszrys.pl/#cennik): 650–1560 zł. Nowy wygląd starej strony, dostosowanie do telefonów, uporządkowanie treści, szybsze ładowanie i lepsza widoczność w Google.
+- [Strona promocyjna](https://mateuszrys.pl/strona-promocyjna): 519–909 zł. Jedna krótka, przewijana strona pod konkretną usługę, promocję lub wydarzenie, skupiona na jednym celu (telefon, zapis, zakup).
+- [Strona wizytówka](https://mateuszrys.pl/strona-wizytowka): 909–1300 zł, najczęściej wybierana. Indywidualny projekt graficzny, sekcje o firmie, oferta, galeria i kontakt, wersja na telefon, tablet i komputer, podstawowa optymalizacja pod Google, poprawki do pełnego zadowolenia.
+- [Odświeżenie strony](https://mateuszrys.pl/odswiezenie-strony): 650–1560 zł. Nowy wygląd starej strony, dostosowanie do telefonów, uporządkowanie treści, szybsze ładowanie i lepsza widoczność w Google.
 - Ceny nie obejmują hostingu ani domeny. Ostateczna cena zależy od ilości treści i funkcji i jest ustalana przed rozpoczęciem pracy.
 
 ## Jak wygląda współpraca
@@ -24,6 +24,12 @@
 - Każda strona działa na telefonie, tablecie i komputerze.
 - Poprawki są wprowadzane w trakcie pracy, aż efekt będzie taki, jak chce klient.
 
+## Poradnik
+
+- [Ile kosztuje strona internetowa dla firmy w 2026 roku?](https://mateuszrys.pl/blog/ile-kosztuje-strona-internetowa): od czego zależy cena, co jest w cenie, koszty domeny i hostingu.
+- [Strona wizytówka czy strona promocyjna – co wybrać?](https://mateuszrys.pl/blog/strona-wizytowka-czy-promocyjna): porównanie i wskazówki wyboru.
+- [Co przygotować przed zamówieniem strony internetowej?](https://mateuszrys.pl/blog/co-przygotowac-przed-zamowieniem-strony): lista kontrolna dla klienta.
+
 ## Realizacje
 
 - [BMW M4 Competition – strona prezentacyjna](https://mateuszrys.pl/realizacje/m4): projekt koncepcyjny, jednostronicowa prezentacja samochodu ze sceną 3D nocnej drogi w deszczu i animacjami sterowanymi przewijaniem.
@@ -35,3 +41,4 @@
 - E-mail: mateuszrys1805@gmail.com
 - Telefon: +48 797 414 907
 - Obszar działania: cała Polska (zdalnie)
+- English version: https://mateuszrys.pl/en/
