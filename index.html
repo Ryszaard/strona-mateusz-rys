@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mateusz Ryś – Strony internetowe</title>
-<meta name="description" content="Nowoczesne strony internetowe dla firm: strona promocyjna od 519 zł, wizytówka od 909 zł, odświeżenie od 650 zł. Indywidualny projekt i wersja na telefon.">
+<meta name="description" content="Nowoczesne strony internetowe dla firm: strona promocyjna 799 zł, wizytówka 1490 zł, odświeżenie od 990 zł. Ceny końcowe, bez VAT. Indywidualny projekt i wersja na telefon.">
 <link rel="canonical" href="https://mateuszrys.pl/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
@@ -15,7 +15,7 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:site_name" content="Mateusz Ryś – Strony internetowe">
 <meta property="og:title" content="Mateusz Ryś – Strony internetowe dla firm">
-<meta property="og:description" content="Nowoczesne strony internetowe dla firm. Indywidualny projekt, wersja na telefon, ceny od 519 zł.">
+<meta property="og:description" content="Nowoczesne strony internetowe dla firm. Indywidualny projekt, wersja na telefon, ceny od 799 zł.">
 <meta property="og:url" content="https://mateuszrys.pl/">
 <meta property="og:image" content="https://mateuszrys.pl/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -35,11 +35,12 @@
   "founder": { "@type": "Person", "name": "Mateusz Ryś" },
   "areaServed": "PL",
   "availableLanguage": ["pl", "en"],
-  "priceRange": "519–1560 zł",
+  "priceRange": "799–2490 zł",
   "makesOffer": [
-    { "@type": "Offer", "name": "Strona promocyjna", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 519, "maxPrice": 909, "priceCurrency": "PLN" } },
-    { "@type": "Offer", "name": "Strona wizytówka", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 909, "maxPrice": 1300, "priceCurrency": "PLN" } },
-    { "@type": "Offer", "name": "Odświeżenie strony", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 650, "maxPrice": 1560, "priceCurrency": "PLN" } }
+    { "@type": "Offer", "name": "Strona promocyjna", "price": 799, "priceCurrency": "PLN" },
+    { "@type": "Offer", "name": "Strona wizytówka", "price": 1490, "priceCurrency": "PLN" },
+    { "@type": "Offer", "name": "Strona firmowa", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 2490, "priceCurrency": "PLN" } },
+    { "@type": "Offer", "name": "Odświeżenie strony", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 990, "priceCurrency": "PLN" } }
   ]
 }
 </script>
@@ -77,7 +78,7 @@
       "name": "Czy umieszczasz stronę w internecie?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nie – moim zadaniem jest zaprojektowanie i wykonanie strony. Po zakończeniu pracy dostajesz gotowe pliki, a publikację (hosting i domenę) załatwiasz samodzielnie u wybranego dostawcy."
+        "text": "Mogę. Po zakończeniu pracy dostajesz gotowe pliki strony i możesz opublikować ją sam u wybranego dostawcy albo zlecić to mnie za 149 zł – pomogę założyć domenę i hosting i uruchomię stronę. Opłaty za domenę i hosting płacisz bezpośrednio dostawcy."
       }
     },
     {
@@ -250,6 +251,9 @@ html[lang=pl] .pol-en, html[lang=en] .pol-pl{display:none}
 .price li svg{flex-shrink:0;margin-top:3px;color:var(--ok)}
 .price.soon{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;border-style:dashed}
 .price.soon p{color:var(--muted);margin:10px 0 24px}
+.price-extra{max-width:820px;margin:34px auto 0;padding:22px 26px;border-radius:20px;background:var(--card);border:1px solid var(--line);display:grid;gap:10px;font-size:15px;color:var(--muted);text-align:center}
+.price-extra b{color:var(--text,#fff)}
+.price-extra .promo{color:var(--accent2)}
 
 /* FORM */
 #zamow{background:linear-gradient(180deg,transparent,#7c5cff0a 30%,transparent)}
@@ -434,7 +438,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <a href="#cennik" class="btn btn-ghost">Zobacz cennik</a>
       </div>
       <div class="hero-stats">
-        <div><b>od 519 zł</b><span>strona promocyjna</span></div>
+        <div><b>od 799 zł</b><span>strona promocyjna</span></div>
         <div><b>100%</b><span>wygląda dobrze na telefonie</span></div>
         <div><b>1:1</b><span>indywidualny projekt</span></div>
       </div>
@@ -546,17 +550,19 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <span class="tag">Cennik</span>
       <h2>Prosto i <span class="grad-text">przejrzyście</span></h2>
       <p>Ostateczna cena zależy od ilości treści i funkcji – dokładną wycenę dostaniesz po wypełnieniu formularza.</p>
+      <p><b>Wszystkie ceny są cenami końcowymi – nie doliczam VAT.</b></p>
     </div>
     <div class="price-wrap">
       <div class="price reveal">
         <h3>Strona promocyjna</h3>
         <p class="desc">Jedna krótka strona pod konkretną usługę, promocję lub wydarzenie.</p>
-        <div class="amount">519 – 909 <small>zł</small></div>
+        <div class="amount">799 <small>zł</small></div>
         <ul>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Jednostronicowy, przewijany projekt</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Skupiona na jednym celu – telefon, zapis, zakup</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Świetny wygląd na każdym telefonie</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Wyraźne przyciski kontaktu</li>
+          <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>2 rundy poprawek w cenie</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Gotowe pliki strony do samodzielnej publikacji</li>
         </ul>
         <a href="#zamow" class="btn btn-ghost" style="width:100%;justify-content:center" data-pkg="Strona promocyjna">Zamów stronę promocyjną</a>
@@ -565,23 +571,24 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <span class="pop">Najczęściej wybierana</span>
         <h3>Strona wizytówka</h3>
         <p class="desc">Idealna dla firm, które chcą profesjonalnie zaistnieć w internecie.</p>
-        <div class="amount">909 – 1300 <small>zł</small></div>
+        <div class="amount">1490 <small>zł</small></div>
         <ul>
-          <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Indywidualny projekt graficzny</li>
+          <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Do 5 podstron z indywidualnym projektem</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Dopasowanie do telefonu, tabletu i komputera</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Sekcje: o firmie, oferta, galeria, kontakt</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Linki do mediów społecznościowych i klikalny kontakt</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Podstawowa optymalizacja pod wyszukiwarkę Google</li>
+          <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Założenie Wizytówki Google (firma na mapach)</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Poprawki do pełnego zadowolenia</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Gotowe pliki strony do samodzielnej publikacji</li>
         </ul>
-        <p class="hint" style="color:var(--muted);font-size:13px;margin:-14px 0 22px">Cena nie obejmuje hostingu ani domeny – stronę umieszczasz w internecie samodzielnie.</p>
+        <p class="hint" style="color:var(--muted);font-size:13px;margin:-14px 0 22px">Cena nie obejmuje hostingu ani domeny. Stronę publikujesz sam albo zlecasz to mnie (+149 zł).</p>
         <a href="#zamow" class="btn btn-primary" style="width:100%;justify-content:center" data-pkg="Strona wizytówka">Zamów stronę wizytówkę</a>
       </div>
       <div class="price reveal">
         <h3>Odświeżenie strony</h3>
         <p class="desc">Masz starą, przestarzałą stronę? Nadam jej nowoczesny wygląd.</p>
-        <div class="amount">650 – 1560 <small>zł</small></div>
+        <div class="amount"><small>od</small> 990 <small>zł</small></div>
         <ul>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Nowy, nowoczesny wygląd strony</li>
           <li><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Dostosowanie do telefonów i tabletów</li>
@@ -591,6 +598,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </ul>
         <a href="#zamow" class="btn btn-ghost" style="width:100%;justify-content:center" data-pkg="Odświeżenie strony">Odśwież swoją stronę</a>
       </div>
+    </div>
+    <div class="price-extra reveal">
+      <p><b>Strona firmowa (do 8 podstron)</b> – od 2490 zł</p>
+      <p><b>Dodatki:</b> dodatkowa podstrona 199 zł · publikacja strony (domena i hosting) 149 zł · teksty na stronę od 299 zł · wersja angielska +30% · opieka nad stroną od 79 zł/mies.</p>
+      <p class="promo">🎉 Na start: pierwsze 3 firmy dostają <b>30% rabatu</b> w zamian za opinię w Google i zgodę na pokazanie strony w portfolio.</p>
     </div>
     <p class="reveal" style="text-align:center;color:var(--muted);margin-top:34px;font-size:15px">Masz inny pomysł? Opisz go w formularzu – przygotuję <a href="#zamow" data-pkg="Indywidualna wycena" style="color:var(--accent2);font-weight:600">indywidualną wycenę</a>.</p>
   </div>
@@ -676,9 +688,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <p class="sub">Opisz swoją wizję własnymi słowami – nie musisz znać się na technice.</p>
           <div class="field" role="group" aria-labelledby="lbl-11"><label id="lbl-11">Rodzaj strony</label>
             <div class="chips" id="pkgChips">
-              <label class="chip"><input type="radio" name="Pakiet" value="Strona promocyjna"><span>Strona promocyjna (519–909 zł)</span></label>
-              <label class="chip"><input type="radio" name="Pakiet" value="Strona wizytówka" checked><span>Strona wizytówka (909–1300 zł)</span></label>
-              <label class="chip"><input type="radio" name="Pakiet" value="Odświeżenie strony"><span>Odświeżenie strony (650–1560 zł)</span></label>
+              <label class="chip"><input type="radio" name="Pakiet" value="Strona promocyjna"><span>Strona promocyjna (799 zł)</span></label>
+              <label class="chip"><input type="radio" name="Pakiet" value="Strona wizytówka" checked><span>Strona wizytówka (1490 zł)</span></label>
+              <label class="chip"><input type="radio" name="Pakiet" value="Odświeżenie strony"><span>Odświeżenie strony (od 990 zł)</span></label>
+              <label class="chip"><input type="radio" name="Pakiet" value="Strona firmowa"><span>Strona firmowa (od 2490 zł)</span></label>
               <label class="chip"><input type="radio" name="Pakiet" value="Indywidualna wycena"><span>Coś większego – indywidualna wycena</span></label>
               <label class="chip"><input type="radio" name="Pakiet" value="Nie wiem – doradź"><span>Nie wiem – doradź mi</span></label>
             </div>
@@ -778,7 +791,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <details class="reveal"><summary>Ile trwa wykonanie strony wizytówki?</summary><p>Zazwyczaj od kilku dni do dwóch tygodni – zależy od ilości treści i tego, jak szybko dostanę od Ciebie materiały.</p></details>
       <details class="reveal"><summary>Od czego zależy ostateczna cena?</summary><p>Od liczby sekcji, ilości treści, galerii i dodatkowych elementów. Dokładną cenę podaję po zapoznaniu się z formularzem – zanim zaczniemy pracę.</p></details>
       <details class="reveal"><summary>Nie mam tekstów ani zdjęć – czy to problem?</summary><p>Nie. Zaznacz to w formularzu – pomogę przygotować treści i dobrać odpowiednie zdjęcia.</p></details>
-      <details class="reveal"><summary>Czy umieszczasz stronę w internecie?</summary><p>Nie – moim zadaniem jest zaprojektowanie i wykonanie strony. Po zakończeniu pracy dostajesz gotowe pliki, a publikację (hosting i domenę) załatwiasz samodzielnie u wybranego dostawcy.</p></details>
+      <details class="reveal"><summary>Czy umieszczasz stronę w internecie?</summary><p>Mogę. Po zakończeniu pracy dostajesz gotowe pliki strony i możesz opublikować ją sam u wybranego dostawcy albo zlecić to mnie za 149 zł – pomogę założyć domenę i hosting i uruchomię stronę. Opłaty za domenę i hosting płacisz bezpośrednio dostawcy.</p></details>
       <details class="reveal"><summary>Czy strona będzie działać na telefonie?</summary><p>Tak, każda strona jest dopasowana do różnych ekranów – wygląda dobrze na telefonie, tablecie i komputerze.</p></details>
       <details class="reveal"><summary>Czy mogę zgłaszać poprawki?</summary><p>Oczywiście. Pokazuję podgląd strony w trakcie pracy i wprowadzam Twoje uwagi, aż efekt będzie taki, jak chcesz.</p></details>
     </div>
@@ -1196,7 +1209,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 (function(){
   const EN = {
     "Mateusz Ryś – Strony internetowe": "Mateusz Ryś – Websites",
-    "Nowoczesne strony internetowe dla firm: strona promocyjna od 519 zł, wizytówka od 909 zł, odświeżenie od 650 zł. Indywidualny projekt i wersja na telefon.": "Modern websites for businesses: promo page from 519 PLN, business card site from 909 PLN, refresh from 650 PLN. Custom design, mobile-friendly.",
+    "Nowoczesne strony internetowe dla firm: strona promocyjna 799 zł, wizytówka 1490 zł, odświeżenie od 990 zł. Ceny końcowe, bez VAT. Indywidualny projekt i wersja na telefon.": "Modern websites for businesses: promo page 799 PLN, business card site 1490 PLN, refresh from 990 PLN. Final prices, no VAT added. Custom design, mobile-friendly.",
     "Strony internetowe": "Websites",
     "Oferta": "Services",
     "Realizacje": "Portfolio",
@@ -1225,7 +1238,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Tworzę nowoczesne, szybkie i dopasowane do telefonów strony internetowe dla firm. Ty opisujesz swój pomysł – ja zamieniam go w gotową stronę, którą sam umieszczasz w internecie.": "I build modern, fast, mobile-friendly websites for businesses. You describe your idea – I turn it into a finished website that you publish online yourself.",
     "Opisz swoją stronę →": "Describe your website →",
     "Zobacz cennik": "See pricing",
-    "od 519 zł": "from 519 PLN",
+    "od 799 zł": "from 799 PLN",
+    "od": "from",
     "strona promocyjna": "promo page",
     "wygląda dobrze na telefonie": "looks great on mobile",
     "indywidualny projekt": "custom design",
@@ -1298,7 +1312,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Linki do mediów społecznościowych i klikalny kontakt": "Social media links and clickable contact details",
     "Podstawowa optymalizacja pod wyszukiwarkę Google": "Basic Google search optimisation",
     "Poprawki do pełnego zadowolenia": "Revisions until you're fully satisfied",
-    "Cena nie obejmuje hostingu ani domeny – stronę umieszczasz w internecie samodzielnie.": "The price does not include hosting or a domain – you publish the website yourself.",
+    "Cena nie obejmuje hostingu ani domeny. Stronę publikujesz sam albo zlecasz to mnie (+149 zł).": "The price does not include hosting or a domain. You can publish the website yourself or have me do it (+149 PLN).",
+    "Wszystkie ceny są cenami końcowymi – nie doliczam VAT.": "All prices are final – no VAT is added.",
+    "2 rundy poprawek w cenie": "2 rounds of revisions included",
+    "Do 5 podstron z indywidualnym projektem": "Up to 5 subpages with a custom design",
+    "Założenie Wizytówki Google (firma na mapach)": "Google Business Profile setup (your business on the map)",
+    "Strona firmowa (do 8 podstron)": "Company website (up to 8 subpages)",
+    "– od 2490 zł": "– from 2490 PLN",
+    "Dodatki:": "Extras:",
+    "dodatkowa podstrona 199 zł · publikacja strony (domena i hosting) 149 zł · teksty na stronę od 299 zł · wersja angielska +30% · opieka nad stroną od 79 zł/mies.": "extra subpage 199 PLN · publishing (domain and hosting) 149 PLN · website copywriting from 299 PLN · English version +30% · website care from 79 PLN/month",
+    "🎉 Na start: pierwsze 3 firmy dostają": "🎉 Launch offer: the first 3 businesses get",
+    "30% rabatu": "30% off",
+    "w zamian za opinię w Google i zgodę na pokazanie strony w portfolio.": "in exchange for a Google review and permission to show the website in my portfolio.",
     "Zamów stronę wizytówkę": "Order a business card website",
     "Odświeżenie strony": "Website refresh",
     "Masz starą, przestarzałą stronę? Nadam jej nowoczesny wygląd.": "Have an old, outdated website? I'll give it a modern look.",
@@ -1359,9 +1384,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Jaką stronę chcesz mieć?": "What kind of website do you want?",
     "Opisz swoją wizję własnymi słowami – nie musisz znać się na technice.": "Describe your vision in your own words – no technical knowledge needed.",
     "Rodzaj strony": "Website type",
-    "Strona promocyjna (519–909 zł)": "Promo page (519–909 PLN)",
-    "Strona wizytówka (909–1300 zł)": "Business card website (909–1300 PLN)",
-    "Odświeżenie strony (650–1560 zł)": "Website refresh (650–1560 PLN)",
+    "Strona promocyjna (799 zł)": "Promo page (799 PLN)",
+    "Strona wizytówka (1490 zł)": "Business card website (1490 PLN)",
+    "Odświeżenie strony (od 990 zł)": "Website refresh (from 990 PLN)",
+    "Strona firmowa (od 2490 zł)": "Company website (from 2490 PLN)",
     "Coś większego – indywidualna wycena": "Something bigger – custom quote",
     "Nie wiem – doradź mi": "Not sure – advise me",
     "Indywidualna wycena": "Custom quote",
@@ -1451,7 +1477,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     "Nie mam tekstów ani zdjęć – czy to problem?": "I don't have text or photos – is that a problem?",
     "Nie. Zaznacz to w formularzu – pomogę przygotować treści i dobrać odpowiednie zdjęcia.": "No. Just mention it in the form – I'll help you prepare the content and choose suitable photos.",
     "Czy umieszczasz stronę w internecie?": "Do you publish the website online?",
-    "Nie – moim zadaniem jest zaprojektowanie i wykonanie strony. Po zakończeniu pracy dostajesz gotowe pliki, a publikację (hosting i domenę) załatwiasz samodzielnie u wybranego dostawcy.": "No – my job is to design and build the website. When it's finished, you receive the ready-made files and take care of publishing (hosting and domain) yourself with a provider of your choice.",
+    "Mogę. Po zakończeniu pracy dostajesz gotowe pliki strony i możesz opublikować ją sam u wybranego dostawcy albo zlecić to mnie za 149 zł – pomogę założyć domenę i hosting i uruchomię stronę. Opłaty za domenę i hosting płacisz bezpośrednio dostawcy.": "Yes, if you want. When the work is finished you receive the website files and can publish it yourself with any provider, or have me do it for 149 PLN – I'll help you set up the domain and hosting and launch the site. You pay the domain and hosting fees directly to the provider.",
     "Czy strona będzie działać na telefonie?": "Will the website work on mobile?",
     "Tak, każda strona jest dopasowana do różnych ekranów – wygląda dobrze na telefonie, tablecie i komputerze.": "Yes, every website adapts to different screens – it looks great on phones, tablets and desktops.",
     "Czy mogę zgłaszać poprawki?": "Can I request changes?",
